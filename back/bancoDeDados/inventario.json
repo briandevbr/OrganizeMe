@@ -1,0 +1,16 @@
+{
+  "produtos": {
+    "nomeDoProduto": {
+      "quantidade": "xx",
+      "preco": "xx"
+    },
+    "nomeDoProduto2": {
+      "quantidade": "xx",
+      "preco": "xx"
+    },
+    "nomeDoProduto3": {
+      "quantidade": "xx",
+      "preco": "xx"
+    }
+  }
+}
