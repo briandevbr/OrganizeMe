@@ -1,43 +1,55 @@
-const validarEmail = (email) => {
-  const regexEmail = /^[^\s@]+@[^\s@]+\.(com|br|edu|sempreuninassau)$/i;
-
-  if (!regexEmail.test(email)) return { erro: "email invalido" };
-
-  return email.trim();
+const verificarEmail = (email) => {
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
+  return regexEmail.test(email);
 };
 
-const validarSenha = (senha) => {
+const verificarSenha = (senha) => {
   const temOitoCaracteres = senha.length >= 8;
-  const temCaracEspecial = /[!@#$%*]/.test(senha);
-  const temMaiuscula = /[A-Z]/.test(senha);
-  const temEspacoEmBranco = /\s/.test(senha);
-
   if (!temOitoCaracteres)
     return { erro: "a senha precisa ter mais de 8 caracteres" };
+
+  const temCaracEspecial = /[!@#$%*]/.test(senha);
   if (!temCaracEspecial) return { erro: "1 caractere especial ex: !@#$%*" };
+
+  const temMaiuscula = /[A-Z]/.test(senha);
   if (!temMaiuscula) return { erro: "precisa de 1 letra maiuscula" };
+
+  const temEspacoEmBranco = /\s/.test(senha);
   if (temEspacoEmBranco)
     return { erro: "a senha nao pode ter espacos em branco" };
 
-  return senha;
+  return { valido: true };
 };
 
-export const login = (email, senha) => {
+const possuiEspacoEmBranco = (user) => /\s/.test(user);
+
+export const login = (email, senha, username) => {
   if (
-    [email, senha].every((str) => typeof str !== "string" || str.trim() === "")
-  )
-    return "dados invalidos";
+    [email, senha, username].some(
+      (str) => typeof str !== "string" || str.trim() === "",
+    )
+  ) {
+    return { erro: "entradas incorretas." };
+  }
 
-  const emailLimpo = validarEmail(email);
-  if (emailLimpo.erro) return emailLimpo;
+  const emailLimpo = email.trim();
+  const emailValido = verificarEmail(emailLimpo);
+  if (!emailValido) return { erro: "email invalido" };
 
-  const senhaLimpa = validarSenha(senha);
-  if (senhaLimpa.erro) return senhaLimpa;
+  const statusSenha = verificarSenha(senha);
+  if (statusSenha.erro) return statusSenha;
+
+  const usernameLimpo = username.trim();
+  const usuarioPossuiEspaco = possuiEspacoEmBranco(usernameLimpo);
+  if (usuarioPossuiEspaco) return { erro: "usuario nao pode conter espaco" };
 
   return {
     dados: {
       email: emailLimpo,
-      senha: senhaLimpa,
+      senha,
+      username: usernameLimpo,
     },
   };
 };
+
+console.log(login(" mr.brian154@gmail.com", " br", "ia "));
