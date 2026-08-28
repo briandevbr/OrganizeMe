@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
-    <div class="login-inputs">
+
     <h1>Login</h1>
-    <form action="login.html" method="post">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-
-        <input type="submit" value="Entrar">
-    </form>
+    <div class="input-group">
+        <label for="email">E-mail</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            autocomplete="email"
+            placeholder="Digite seu e-mail"
+            required>
     </div>
-    
+
+    <div class="input-group">
+        <label for="password">Senha</label>
+        <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            autocomplete="current-password"
+            placeholder="Digite sua senha"
+            required>
+    </div>
+
+    <button type="submit" class="btn-submit">Entrar</button>
+
 </body>
 </html>
