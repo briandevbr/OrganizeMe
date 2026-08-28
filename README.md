@@ -27,7 +27,7 @@
 ## 💻 Equipe de desenvolvimento
 
 - [David Brian](https://github.com/briandevbr)
-- [Davi Perreli](https://github.com/DaviPerrelli15)
+- [Davi Perrelli](https://github.com/DaviPerrelli15)
 - [Thiago Guimarães](https://github.com/thiagoguimaraessf-afk)
 - [Rayanne Melo](https://github.com/rayannemelo222)
 - [Kauã Heinzel](https://github.com/kauaheinzel)
@@ -37,7 +37,7 @@
 
 ## 👤 Tutor
 
-- [Felipe Araujo](https://github.com/FilipeHSAraujo)
+- [Filipe Araujo](https://github.com/FilipeHSAraujo)
 
 ---
 
