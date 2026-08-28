@@ -1,27 +1,74 @@
+body {
+    padding-top: 60px;
+    background: radial-gradient(circle, #65d6c8, #aaf3ef, #feffff);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.descricao {
+    max-width: 470px;
+    padding: 20px;
+    font-size: 12px;
+    border: 1px solid #7BD1CA;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    font-family: "Inter", sans-serif;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .botoes {
     display: flex;
-    gap: 17px;
     align-items: center;       
     position: fixed;
-    top: 20px;
-    right: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    background: #a3e3c8;
+    background: linear-gradient(90deg, rgba(163, 227, 200, 1) 0%, rgba(88, 168, 140, 1) 35%, rgba(86, 209, 143, 1) 100%);
+    
+}
+
+.links {
+    display: flex;
+    gap: 17px;
 }
 
 .botoes button {
-    background-color: #08756f;
+    background-color: #7BD1CA;
     color: #0d1117;
     border: none;
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 0 15px #08756f;
+    box-shadow: 0 0 15px #7BD1CA;
     animation: pulse 1.5s infinite;
 
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 10px #08756f; }
-    50% { box-shadow: 0 0 30px #08756f; }
+    0%, 100% { box-shadow: 0 0 10px #7BD1CA; }
+    50% { box-shadow: 0 0 30px #7BD1CA; }
 }
 
