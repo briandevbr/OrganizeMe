@@ -2,11 +2,20 @@ body{
     background-color: #f9f8fa
 }
 
-.cadastro{
-background-color: aliceblue;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+.SiCad{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 350px;
+    width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}   
+.usuario{
+    
 }
