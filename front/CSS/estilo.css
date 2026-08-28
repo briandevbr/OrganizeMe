@@ -1,0 +1,27 @@
+.botoes {
+    display: flex;
+    gap: 17px;
+    align-items: center;       
+    position: fixed;
+    top: 20px;
+    right: 25px;
+}
+
+.botoes button {
+    background-color: #08756f;
+    color: #0d1117;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #08756f;
+    animation: pulse 1.5s infinite;
+
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 10px #08756f; }
+    50% { box-shadow: 0 0 30px #08756f; }
+}
+
