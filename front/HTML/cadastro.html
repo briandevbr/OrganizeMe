@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,22 @@
 </head>
 <body>
     <h1>Cadastro</h1>
-    <from action="cadastro.html" method="post">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
-
+    <div>
+        <from action="cadastro.html" method="post">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+    </div>
+    <div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br><br>
-
+    </div>
+    <div>
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
         <br><br>
-
+    </div>
         <input type="submit" value="Cadastrar">
     </from>
 </body>

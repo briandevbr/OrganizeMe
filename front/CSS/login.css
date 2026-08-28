@@ -1,0 +1,130 @@
+/* Importação da fonte DM Sans usada na página principal */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* Variáveis com a paleta exata do seu código */
+:root {
+  --ink: #102a2d;
+  --muted: #60787a;
+  --teal: #0f8f88;
+  --teal-dark: #08756f;
+  --mist: #e9f8f6;
+  --line: #d8e9e7;
+  --line-focus: #78d7cd;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização do fundo (igual ao .page-shell do seu HTML de referência) */
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(128, 223, 212, .2) 0, rgba(128, 223, 212, 0) 24rem),
+    linear-gradient(180deg, #ffffff 0%, #fbfefd 75%, #f2fbfa 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Título de Login */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+/* Grupo de rótulo e campo de digitação */
+.input-group {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background-color: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.input-group input::placeholder {
+  color: var(--muted);
+}
+
+/* Efeito ao focar no input */
+.input-group input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(120, 215, 205, 0.4);
+}
+
+/* Link de Registro */
+.registrar {
+  width: 100%;
+  max-width: 360px;
+  text-align: right;
+  margin-top: -6px;
+  margin-bottom: 24px;
+}
+
+.registrar a {
+  color: var(--teal-dark);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.registrar a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+/* Botão de Enviar (mesmo estilo do botão .action-button) */
+.btn-submit {
+  width: 100%;
+  max-width: 360px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: var(--teal);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 13px 26px rgba(15, 143, 136, .2);
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 17px 32px rgba(15, 143, 136, .27);
+}
