@@ -1,12 +1,23 @@
 body{
-    background-color: #f9f8fa
+    background-image: url("fundo.jpg");
+    background-size: cover;
+
 }
 
-.cadastro{
-background-color: aliceblue;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+.regis{
+    background-color: #DEDEDEDE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 450px;
+    width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}   
+.usuario{
+    
 }
