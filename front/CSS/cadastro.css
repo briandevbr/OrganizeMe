@@ -1,0 +1,12 @@
+body{
+    background-color: #f9f8fa
+}
+
+.cadastro{
+background-color: aliceblue;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
