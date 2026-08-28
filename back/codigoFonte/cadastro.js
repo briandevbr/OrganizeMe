@@ -51,5 +51,3 @@ export const login = (email, senha, username) => {
     },
   };
 };
-
-console.log(login(" mr.brian154@gmail.com", " br", "ia "));
