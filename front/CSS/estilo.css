@@ -1,6 +1,6 @@
 body {
     padding-top: 60px;
-    background: radial-gradient(circle, #b7e9e3, #e1eeee, #feffff);
+    background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
 }
@@ -45,18 +45,25 @@ h1 {
     padding: 12px 25px;
     box-sizing: border-box;
     background: #c1f5de;
-    background: linear-gradient(270deg, rgba(193, 245, 222, 1) 2%, rgba(240, 255, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(270deg, rgb(161, 243, 206) 2%, rgba(240, 255, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.botoes-direita {
+    display: flex;
+    align-items: center;
+    gap: 17px;
 }
 
 .login {
     display: flex;
-    gap: 17px;
-    margin-left: auto;
 }
+
 .cadastro {
     display: flex;
-    gap: 17px;
-    margin-left: 17px;
+}
+
+.ajuda {
+    display: flex;
 }
 
 .botoes button {
@@ -69,10 +76,16 @@ h1 {
     cursor: pointer;
     box-shadow: 0 0 15px #7BD1CA;
     animation: pulse 1.5s infinite;
-
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cadastro button {
+.botoes button:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.08);
+}
+
+.cadastro button,
+.ajuda button {
     background-color: #ffffff;
     box-shadow: 0 0 15px #ffffff;
     animation: pulseWhite 1.5s infinite;
