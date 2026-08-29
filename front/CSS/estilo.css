@@ -1,5 +1,6 @@
 body {
-    padding-top: 60px;
+    padding-top: 90px;
+    padding-left: 30px;
     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
@@ -12,15 +13,22 @@ h1 {
     font-size: 24px;
 }
 
+.titulo {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-family: "Inter", sans-serif;
+}
+
 .descricao {
     max-width: 470px;
-    padding: 20px;
-    font-size: 12px;
-    border: 1px solid #7BD1CA;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.72);
     font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
 }
 
 @keyframes gradientMove {
@@ -73,6 +81,8 @@ h1 {
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 14px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
     cursor: pointer;
     box-shadow: 0 0 15px #7BD1CA;
     animation: pulse 1.5s infinite;
