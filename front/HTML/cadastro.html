@@ -6,32 +6,45 @@
     <title>registro</title>
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/cadastro.css">
+    <script src="https://kit.fontawesome.com/22a8724ea3.js" crossorigin="anonymous"></script>
 </head>
 <body>
      <div class="regis">
-             <h1>CRIAR CONTA</h1><br>  
+             <h1>CRIAR CONTA</h1>  
         <div class="formulario">
             <div class="usuario">
                  <form> <action="cadastro.html" method="post">
-                 <label for="nome">Nome Completo:</label>
-                 <input type="text" id="nome" name="nome" required> <br>
+                 <label for="nome">Nome Completo:</label> <br>
+                 <input class="boxtext" type="text" id="nome" name="nome" required>
              </div>  
                    
             <div class="email">
-             <label for="email">Email:</label>
-             <input type="email" id="email" name="email" required><br>
+             <label for="email">Email:</label> <br>
+             <input class="boxtext" type="email" id="email" name="email" required>
              </div>
         
-            <div class="password">
-             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required><br>
+             <div class="company">
+             <label class="company"for="company">Nome da Empresa:</label> <br>
+             <input class="boxtext" type="name" id="company">
+             
+             <div class="function">
+             <label for="function">Cargo:</label> <br>
+            <input class="boxtext" type="text" id="function" name="function" required>
              </div>
-            
-             <div class="empresa">
-             <label for="empresa">Nome da Empresa:</label>
-             <input type="name" id="empresanome"><br>
-             <input type="submit" value="Cadastrar Empresa">
+
+             <div class="password">
+             <label for="password">Senha:</label> <br>
+            <input class="boxtext" type="password" id="password" name="password" required>
+             </div>
+
+             <div class="password">
+             <label for="confirm-password">Confirmar Senha:</label> <br>
+            <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
+             </div>     
     </div>
+        <input class="botaocad" type="submit" value="Cadastrar Empresa">
+  
+    <i class="fa-regular fa-address-card"></i>
 </form>
 </body>
 </html> 
