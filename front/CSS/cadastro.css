@@ -1,7 +1,11 @@
+@font-face{
+  font-family:golos-text;
+  src: url("fontes/Golos-Text.ttf")
+}
 body{
-    background-image: url("fundo.jpg");
+    
     background-size: cover;
-
+    font-family: golos-text;
 }
 
 .regis{
@@ -10,14 +14,40 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
-    height: 450px;
+    border-radius: 15px;
+    height: 600px;
     width: 450px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-}   
-.usuario{
-    
+}
+.boxtext{
+  border: 0;
+  border-radius: 5px;
+  width: 375px;
+  height: 30px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  
+  
+  
+}
+.botaocad{
+  position: absolute;
+  left: 50%;                     
+  transform: translateX(-50%);   
+  bottom: 15px;
+  width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #FF6200;
+  font-family: golos-text;
+  font-size: 24px;
+}
+.fa-address-card{
+  font-size: 20px;
+  transform: translateY(-158px) translateX(10px)
 }
