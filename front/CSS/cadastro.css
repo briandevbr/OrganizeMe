@@ -51,3 +51,24 @@ body{
   font-size: 20px;
   transform: translateY(-158px) translateX(10px)
 }
+.fa-user{
+  font-size: 20px;
+  transform: translateY(-344px) translateX(-17px)
+}
+.fa-envelope{
+  font-size: 20px;
+  transform: translateY(-280px) translateX(-48px)
+} 
+.fa-building{
+  font-size: 20px;
+  transform: translateY(-218px) translateX(-78px)
+
+}
+.fa-unlock{
+  font-size: 20px;
+  transform: translateY(-98px) translateX(-106px)
+}
+.fa-circle-check{
+  font-size: 20px;
+  transform: translateY(-36px) translateX(-136px)
+}
