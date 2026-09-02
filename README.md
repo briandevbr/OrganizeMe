@@ -34,6 +34,7 @@
 - [Guilherme Cauã](https://github.com/gui-cauadev)
 - [Miguel Arthur](https://github.com/miguelarthur202)
 - [Carlos Henrique](https://github.com/carloshenrique1611)
+- [Eduardo Willian](https://github.com/BigEddie-png)
 
 ## 👤 Tutor
 
