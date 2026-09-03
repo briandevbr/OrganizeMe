@@ -1,28 +1,35 @@
-@font-face{
-  font-family:golos-text;
-  src: url("fontes/Golos-Text.ttf")
+
+@font-face {
+  font-family: 'Kolak';
+  src: url('../fonts/kolak.ttf') format('truetype'); /* Ajuste a extensão se for .otf ou .woff2 */
+  font-weight: normal;
+  font-style: normal;
 }
+
 body {
-    padding-top: 90px;
-    padding-left: 30px;
-    background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
-    background-size: 300% 300%;
-    animation: gradientMove 8s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
 }
 
 .regis{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 15px;
-    height: 600px;
-    width: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(50%);
 }
+
+.regis h1 {
+  font-family: 'Kolak', sans-serif;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  text-align: center;
+}
+
 .boxtext{
   border: 0;
   border-radius: 5px;
@@ -31,15 +38,13 @@ body {
   border-radius: 40px;
   margin-bottom: 10px;
   padding-left: 40px;
-  
-  
-  
 }
+
 .botaocad{
   position: absolute;
   left: 50%;                     
   transform: translateX(-50%);   
-  bottom: 15px;
+  bottom: 130px;
   width: 400px;
   height: 60px;
   border-radius: 20px;
@@ -48,28 +53,10 @@ body {
   font-family: golos-text;
   font-size: 24px;
 }
-.fa-address-card{
-  font-size: 20px;
-  transform: translateY(-158px) translateX(10px)
-}
-.fa-user{
-  font-size: 20px;
-  transform: translateY(-344px) translateX(-17px)
-}
-.fa-envelope{
-  font-size: 20px;
-  transform: translateY(-280px) translateX(-48px)
-} 
-.fa-building{
-  font-size: 20px;
-  transform: translateY(-218px) translateX(-78px)
 
-}
-.fa-unlock{
-  font-size: 20px;
-  transform: translateY(-98px) translateX(-106px)
-}
-.fa-circle-check{
-  font-size: 20px;
-  transform: translateY(-36px) translateX(-136px)
+.grupo-input i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }

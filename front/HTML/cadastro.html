@@ -15,41 +15,39 @@
             <div class="usuario">
                  <form> <action="cadastro.html" method="post">
                  <label for="nome">Nome Completo:</label> <br>
-                 <input class="boxtext" type="text" id="nome" name="nome" required>
+                 <div class="grupo-input">
+                     <i class="fa-regular fa-user"></i>
+                     <input class="boxtext" type="text" id="nome" name="nome" required>
+                 </div>
+                
              </div>  
                    
             <div class="email">
              <label for="email">Email:</label> <br>
-             <input class="boxtext" type="email" id="email" name="email" required>
+            <div class="grupo-input"></div>
+                <i class="fa-solid fa-envelope"></i>
+                <input class="boxtext" type="email" id="email" name="email" required>
              </div>
-        
-             <div class="company">
-             <label class="company"for="company">Nome da Empresa:</label> <br>
-             <input class="boxtext" type="name" id="company">
-             
-             <div class="function">
-             <label for="function">Cargo:</label> <br>
-            <input class="boxtext" type="text" id="function" name="function" required>
-             </div>
+            </div>
 
              <div class="password">
              <label for="password">Senha:</label> <br>
-            <input class="boxtext" type="password" id="password" name="password" required>
+            <div class="grupo-input">
+                <i class="fa-solid fa-lock"></i>
+                <input class="boxtext" type="password" id="password" name="password" required>
+            </div>
              </div>
 
              <div class="password">
              <label for="confirm-password">Confirmar Senha:</label> <br>
-            <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
+            <div class="grupo-input">
+                <i class="fa-regular fa-circle-check"></i>
+                <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
+            </div>
              </div>     
     </div>
         <input class="botaocad" type="submit" value="Cadastrar Empresa">
       <div class="icons">
-        <i class="fa-regular fa-address-card"></i>
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-regular fa-building"></i>
-        <i class="fa-solid fa-unlock"></i>
-        <i class="fa-regular fa-circle-check"></i>
      </div>
 </form>
 </body>
