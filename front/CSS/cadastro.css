@@ -2,14 +2,15 @@
   font-family:golos-text;
   src: url("fontes/Golos-Text.ttf")
 }
-body{
-    
-    background-size: cover;
-    font-family: golos-text;
+body {
+    padding-top: 90px;
+    padding-left: 30px;
+    background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
 }
 
 .regis{
-    background-color: #DEDEDEDE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +18,10 @@ body{
     border-radius: 15px;
     height: 600px;
     width: 450px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 .boxtext{
   border: 0;
@@ -43,7 +44,7 @@ body{
   height: 60px;
   border-radius: 20px;
   border: 0;
-  background-color: #FF6200;
+  background-color: #7BD1CA;
   font-family: golos-text;
   font-size: 24px;
 }
