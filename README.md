@@ -110,4 +110,24 @@
 
 ## Regras de Negócio (Business Rules)
 
-- **RN01 - Tiering de Assinatura:** O volume de produtos ativos e o limite de estoque disponível na plataforma são restritos de forma dinâmica, indexados ao plano contratado pelo usuário (_Paywall/Subscription Limit_).
+- **RN01:** O sistema deve registrar a entrada e saída de produtos.
+- **RN02:** O sistema deve atualizar automaticamente a quantidade disponível - após uma movimentação.
+- **RN03:** O sistema deve alertar quando um produto atingir o estoque mínimo.
+- **RN04:** Cada produto deve possuir um código identificador único.
+- **RN05:** O sistema deve registrar o responsável por cada movimentação.
+- **RN06:** Produtos com quantidade igual a zero devem ser identificados como "Sem estoque".
+- **RN07:** O acesso a determinadas funções deve depender do nível de permissão do usuário.
+
+## Escopo  de Negócios
+
+O sistema terá como escopo o gerenciamento e controle do estoque de produtos, permitindo acompanhar a quantidade física, a quantidade disponível e a quantidade reservada durante o processo de compra.
+
+**O sistema deverá contemplar:**
+
+- Controle da quantidade física e disponível dos produtos;
+- Reserva temporária de produtos durante o checkout;
+- Registro do prazo de expiração das reservas;
+- Atualização do estoque após a confirmação do pagamento;
+- Baixa do estoque no momento da expedição do pedido;
+- Cancelamento e liberação automática de produtos quando a reserva expirar ou o pagamento não for confirmado;
+- Atualização automática das quantidades disponíveis após cada operação.
