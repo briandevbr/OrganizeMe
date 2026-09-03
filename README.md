@@ -13,14 +13,15 @@
 - [Posicionamento]
 - [Descrição da Solução]
 - [Recursos do Produto]
-
+- [Regra de Negócios](#-regra-de-negócios)
+- [Escopo de Negócios](#-escopo-de-negócios)
 ---
 
-# 📍Introdução
+# 📍 Introdução
 
 **O OrganizeMe é uma plataforma global de gestão financeira desenvolvida para simplificar o controle operacional e a previsibilidade de lucros ou prejuízos de empresas de qualquer porte. Com uma abordagem intuitiva e foco em eficiência, a solução se destaca no mercado ao consolidar dados complexos em insights simples. O projeto foi construído utilizando as seguintes tecnologias:**
 
-[![Project](https://skillicons.dev/icons?i=js,nodejs,html,css)](https://skillicons.dev)
+[![Project](https://skillicons.dev/icons?i=js,nodejs,html,css,git,github)](https://skillicons.dev)
 
 ---
 
@@ -35,6 +36,8 @@
 - [Miguel Arthur](https://github.com/miguelarthur202)
 - [Carlos Henrique](https://github.com/carloshenrique1611)
 - [Eduardo Willian](https://github.com/BigEddie-png)
+- [Renato Vinícius](https://github.com/v1ninato)
+- [Pedro Madson](https://github.com/PedroMadsonDevBr)
 
 ## 👤 Tutor
 
@@ -108,7 +111,7 @@
 
 - **Segurança e Privacidade:** Criptografia de ponta a ponta (AES-256), conformidade com a **LGPD**, hashing de senhas (bcrypt/argon2) e uso obrigatório de protocolo HTTPS.
 
-## Regras de Negócio (Business Rules)
+## 📰 Regras de Negócio (Business Rules)
 
 - **RN01:** O sistema deve registrar a entrada e saída de produtos.
 - **RN02:** O sistema deve atualizar automaticamente a quantidade disponível - após uma movimentação.
@@ -118,7 +121,9 @@
 - **RN06:** Produtos com quantidade igual a zero devem ser identificados como "Sem estoque".
 - **RN07:** O acesso a determinadas funções deve depender do nível de permissão do usuário.
 
-## Escopo  de Negócios
+---
+
+## 🔭 Escopo  de Negócios
 
 O sistema terá como escopo o gerenciamento e controle do estoque de produtos, permitindo acompanhar a quantidade física, a quantidade disponível e a quantidade reservada durante o processo de compra.
 
