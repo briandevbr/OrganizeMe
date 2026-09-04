@@ -9,53 +9,53 @@
     <script src="https://kit.fontawesome.com/22a8724ea3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-     <div class="regis">
-             <h1>CRIAR CONTA</h1>  
-        <div class="formulario">
-            <div class="usuario">
-    <form> <action="cadastro.html" method="post">
-                 <label for="nome">Nome Completo:</label> <br>
-                 <div class="grupo-input">
-                     <i class="fa-regular fa-user"></i>
-                     <input class="boxtext" type="text" id="nome" name="nome" required>
-                 </div>
-                
-             </div>  
-                   
-            <div class="email">
-             <label for="email">Email:</label> <br>
-            <div class="grupo-input"></div>
-                <i class="fa-solid fa-envelope"></i>
-                <input class="boxtext" type="email" id="email" name="email" required>
-             </div>
-            </div>
-
-             <div class="password">
-             <label for="password">Senha:</label> <br>
-            <div class="grupo-input">
-                <i class="fa-solid fa-lock"></i>
-                <input class="boxtext" type="password" id="password" name="password" required>
-            </div>
-             </div>
-
-             <div class="password">
-             <label for="confirm-password">Confirmar Senha:</label> <br>
-            <div class="grupo-input">
-                <i class="fa-regular fa-circle-check"></i>
-                <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-             </div>     
-    
-        <input class="botaocad" type="submit" value="Cadastrar Empresa">
-    </form>
-        <div class="voltarlogin">
-             <p>Ja possui conta? <a href="login.html" class="voltaloglink">Entrar</a></p>
-        </div>
+    <div class="regis">
+        <h1>CRIAR CONTA</h1>  
         
-        <div class="showsenha">
-            <button type="button" id="show-password"><i class="fa-regular fa-eye"></i>
-            </button>
-        </div>     
-</div>
+        <div class="formulario">
+            <!-- Tag form corrigida (sem a tag vazia extra) -->
+            <form action="cadastro.html" method="post">
+                
+                <div class="usuario">
+                    <label for="nome">Nome Completo:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-regular fa-user"></i></div>
+                        <input class="boxtext" type="text" id="nome" name="nome" required>
+                    </div>
+                </div>  
+                   
+                <div class="email">
+                    <label for="email">Email:</label> <br>
+                    <!-- Div grupo-input agora envolve corretamente o ícone e o input -->
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <input class="boxtext" type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="password">
+                    <label for="password">Senha:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
+                        <input class="boxtext" type="password" id="password" name="password" required>
+                        <button type="button" class="btn-show-password"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                </div>
+
+                <div class="password">
+                    <label for="confirm-password">Confirmar Senha:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-regular fa-circle-check"></i></div>
+                        <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
+                        <button type="button" class="btn-show-password"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                </div>
+
+            <div class="voltarlogin">
+                <p>Já possui conta? <a href="login.html" class="voltaloglink">Entrar</a></p>
+            </div>
+        </div>
+        <input class="botaocad" type="submit" value="Cadastrar Empresa">
+    </div>
 </body>
-</html> 
+</html>
