@@ -10,11 +10,11 @@
 - [👥 Descrição dos Envolvidos e dos Usuarios](#-professor-responsável)
 - [📂 Estrutura do projeto](#-estrutura-do-projeto)
 - [📋 Especificação Técnica de Requisitos](#-especificação-técnica-de-requisitos)
-- [Posicionamento]
+- [🗺️ Posicionamento](posicionamento)
 - [Descrição da Solução]
 - [Recursos do Produto]
-- [Regra de Negócios](#-regra-de-negócios)
-- [Escopo de Negócios](#-escopo-de-negócios)
+- [📰 Regra de Negócios](#-regra-de-negócios)
+- [🔭Escopo de Negócios](#-escopo-de-negócios)
 ---
 
 # 📍 Introdução
@@ -110,6 +110,10 @@
 ## Requisitos Não-Funcionais
 
 - **Segurança e Privacidade:** Criptografia de ponta a ponta (AES-256), conformidade com a **LGPD**, hashing de senhas (bcrypt/argon2) e uso obrigatório de protocolo HTTPS.
+
+## 🗺️ Posicionamento
+
+Para empresas de qualquer porte que buscam controle financeiro sem complicações, o OrganizeMe é a plataforma global de gestão que transforma dados complexos em previsibilidade e decisões estratégicas, oferecendo clareza operacional e eficiência intuitiva em um só lugar.
 
 ## 📰 Regras de Negócio (Business Rules)
 
