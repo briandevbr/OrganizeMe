@@ -10,11 +10,11 @@
 - [👥 Descrição dos Envolvidos e dos Usuarios](#-professor-responsável)
 - [📂 Estrutura do projeto](#-estrutura-do-projeto)
 - [📋 Especificação Técnica de Requisitos](#-especificação-técnica-de-requisitos)
-- [Posicionamento]
+- [🗺️ Posicionamento](posicionamento)
 - [Descrição da Solução]
 - [Recursos do Produto]
-- [Regra de Negócios](#-regra-de-negócios)
-- [Escopo de Negócios](#-escopo-de-negócios)
+- [📰 Regra de Negócios](#-regra-de-negócios)
+- [🔭Escopo de Negócios](#-escopo-de-negócios)
 ---
 
 # 📍 Introdução
@@ -85,31 +85,38 @@
 
 ### ❓ Central de Ajuda (Help Center)
 
-- **FAQ Integrado:** Seção de perguntas frequentes com componentes _Accordion_.
-- **Omnichannel Support:** Canais de atendimento (E-mail, Chat ou WhatsApp).
+| Componente / Feature     | Prioridade | Descrição Técnica                               |
+| :----------------------- | :--------- | :---------------------------------------------- |
+| **FAQ Integrado:**       | Alta       |Seção de perguntas frequentes com componentes _Accordion_.|
+| **Omnichannel Support:** | Alta       |Canais de atendimento (E-mail, Chat ou WhatsApp).|
 
 ### 🔐 Tela de Login (Sign-In)
 
-| Input / Ação            | Prioridade | Tipo de Componente                          |
-| :---------------------- | :--------- | :------------------------------------------ |
-| **User Identification** | Alta       | _Input_ de E-mail com validação de formato. |
-| **Password Field**      | Alta       | _Input_ de senha com máscara de caracteres. |
-| **Sign-Up Redirect**    | Alta       | Link de conversão para novos usuários.      |
-
-- **Recuperação de Acesso:** Fluxo de _Forgot Password_ (Esqueci minha senha).
-- **CTA Primário:** Botão de submissão do formulário de autenticação.
-- **Password Toggle:** Ícone de visibilidade (olho) para exibir/ocultar senha.
+| Input / Ação              | Prioridade | Tipo de Componente                          |
+| :------------------------ | :--------- | :------------------------------------------ |
+| **User Identification**   | Alta       | _Input_ de E-mail com validação de formato. |
+| **Password Field**        | Alta       | _Input_ de senha com máscara de caracteres. |
+| **Sign-Up Redirect**      | Alta       | Link de conversão para novos usuários.      |
+| **Recuperação de Acesso** | Alta       | Fluxo de _Forgot Password_ (Esqueci minha senha).|
+| **CTA Primário:**         | Alta       | Botão de submissão do formulário de autenticação.|
+| **Password Toggle:**      | Média      | Ícone de visibilidade (olho) para exibir/ocultar senha.|
 
 ### 📝 Tela de Cadastro (Sign-Up)
 
-- **Email Input:** Campo para registro de e-mail corporativo/pessoal.
-- **Password Input:** Campo de criação de senha com validador de complexidade (_Regex_).
-- **Username Input:** Campo para definição de ID único do usuário.
-- **Form Submission:** CTA para finalização do registro e criação da conta.
+| Input / Ação         | Prioridade | Tipo de Componente                                 |
+| :------------------- | :--------- | :------------------------------------------------- |
+| **Email Input:**     | Alta       | Campo para registro de e-mail corporativo/pessoal. |
+| **Password Input:**  | Alta       | Campo de criação de senha com validador de complexidade (_Regex_).|
+| **Username Input:**  | Alta       | Campo para definição de ID único do usuário.       |
+| **Form Submission:** | Alta       |CTA para finalização do registro e criação da conta.|
 
 ## Requisitos Não-Funcionais
 
 - **Segurança e Privacidade:** Criptografia de ponta a ponta (AES-256), conformidade com a **LGPD**, hashing de senhas (bcrypt/argon2) e uso obrigatório de protocolo HTTPS.
+
+## 🗺️ Posicionamento
+
+Para empresas de qualquer porte que buscam controle financeiro sem complicações, o OrganizeMe é a plataforma global de gestão que transforma dados complexos em previsibilidade e decisões estratégicas, oferecendo clareza operacional e eficiência intuitiva em um só lugar.
 
 ## 📰 Regras de Negócio (Business Rules)
 
