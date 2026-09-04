@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  transform: translateY(50%);
+  transform: translateY(30%);
 }
 
 .regis h1 {
@@ -40,10 +40,7 @@ body {
   padding-left: 40px;
 }
 
-.botaocad{
-  position: absolute;
-  left: 50%;                     
-  transform: translateX(-50%);   
+.botaocad{ 
   bottom: 130px;
   width: 400px;
   height: 60px;
@@ -52,6 +49,7 @@ body {
   background-color: #7BD1CA;
   font-family: golos-text;
   font-size: 24px;
+
 }
 
 .grupo-input i {
@@ -59,4 +57,27 @@ body {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+.voltarlogin {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.voltaloglink {
+  font-family: 'Kolak', sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+.showsenha {
+  position: absolute;
+  right: 20px;
+  top: 51%;
+  transform: translateY(-50%);
+}
+#show-password {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
 }
