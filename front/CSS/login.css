@@ -4,4 +4,48 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+}
+h1 {
+  font-size: 35px;
+  width: 20vw;
+  margin-bottom: 30px;
+}
+.input-group {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  font-size: 15px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.registrar {
+  margin: 10px;
+  text-align: center;
+}
+a {
+  font-size: 15px;
+  font-weight: bold;
+}
+.btn-submit {
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
 }
