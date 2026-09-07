@@ -7,13 +7,18 @@
 }
 
 body {
-    padding-top: 90px;
-    padding-left: 30px;
+    height: 100vh;
+    width: 100vw;
     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
 }
-
+.container-titulo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 25px  ;
+}
 h1 {
     font-family: 'Kolak', sans-serif;
     margin: 0;
@@ -118,4 +123,93 @@ h1 {
     0%, 100% { box-shadow: 0 0 10px #ffffff; }
     50% { box-shadow: 0 0 30px #ffffff; }
 }
-
+.area-planos {
+    font-family: "Inter", sans-serif;
+}
+.container-titulo-planos{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1300px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-planos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    margin-top: 80px; /*Distancia das caixas dos planos*/
+}
+.container-planos li::before {
+    content: "✓";         
+    color: #10b981;       
+    font-weight: bold;
+    font-size: 25px;
+}
+.plano01{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+.plano02{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+.plano03{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+/*Botão de escolher o plano*/
+.botaop{ 
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 50px;
+    border:0;
+    width: 380px;  
+    cursor: pointer;
+    background-color: #7BD1CA;
+    box-shadow: 0 0 15px #7BD1CA;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+.titulo-plano{
+    font-size: 25px;
+}
+/*Lista do que tem em cada plano*/
+.card-lista{
+    list-style: none;
+    padding: 0;
+    text-align: left
+}
+.preco{
+    font-size: 30px;
+    font-weight: bold;
+}
