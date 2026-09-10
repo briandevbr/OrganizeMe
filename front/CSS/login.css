@@ -1,10 +1,23 @@
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 body {
   font-size: sanz-serif;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
 }
 h1 {
   font-size: 35px;
