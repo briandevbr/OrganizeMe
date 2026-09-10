@@ -10,8 +10,8 @@
 - [👥 Descrição dos Envolvidos e dos Usuarios](#-professor-responsável)
 - [📂 Estrutura do projeto](#-estrutura-do-projeto)
 - [📋 Especificação Técnica de Requisitos](#-especificação-técnica-de-requisitos)
-- [🗺️ Posicionamento](posicionamento)
-- [Descrição da Solução]
+- [🗺️ Posicionamento](#-posicionamento)
+- [💡Descrição da Solução](#-descrição-da-solução)
 - [Recursos do Produto]
 - [📰 Regra de Negócios](#-regra-de-negócios)
 - [🔭Escopo de Negócios](#-escopo-de-negócios)
@@ -117,6 +117,10 @@
 ## 🗺️ Posicionamento
 
 Para empresas de qualquer porte que buscam controle financeiro sem complicações, o OrganizeMe é a plataforma global de gestão que transforma dados complexos em previsibilidade e decisões estratégicas, oferecendo clareza operacional e eficiência intuitiva em um só lugar.
+
+## 💡 Descrição da Solução
+
+O OrganizeMe é uma plataforma global de inteligência financeira projetada para transformar a rotina operacional e estratégica de empresas de todos os portes. Unindo tecnologia de ponta a uma experiência de uso simples e intuitiva, a solução elimina a complexidade do controle financeiro tradicional e oferece visibilidade total sobre a saúde do negócio.
 
 ## 📰 Regras de Negócio (Business Rules)
 
