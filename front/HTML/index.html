@@ -23,7 +23,7 @@
             </div>
             
         <div class = "container-planos"> <!--Caixa onde esta os planos-->
-            <div class = "plano01">
+            <div class = "plano01 plano-card">
                 <h3 class="titulo-plano">Plano Free</h3>
                 <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
                 <p class="preco">Gratuito</p>
@@ -35,7 +35,7 @@
                 </ul>
                 <a href="cadastro.html"><button type="button" class="botaop">Começar Grátis</button></a>  <!--Botão para o plano free-->
             </div>
-            <div class="plano02">
+            <div class="plano02 plano-card">
                 <h3 class="titulo-plano">Plano Intermediário</h3>
                 <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
                 <p class="preco">R$ 19,99/mês</p>
@@ -48,7 +48,7 @@
                 </ul>
                 <a href="cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
             </div>
-            <div class="plano03">
+            <div class="plano03 plano-card">
                 <h3 class="titulo-plano">Plano Avançado</h3>
                 <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
                 <p class="preco">R$ 29,99/mês</p>
@@ -83,5 +83,19 @@
     </div>
    </div>
 
+    <script>
+        const cards = document.querySelectorAll('.plano-card');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visivel');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach((card) => observer.observe(card));
+    </script>
     </body>
 </html><!-- Página principal do Sistema -->
