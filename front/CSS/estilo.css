@@ -127,12 +127,12 @@ h1 {
     font-family: "Inter", sans-serif;
 }
 .container-titulo-planos{
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 1300px;
-    margin-top: 100px;
+    margin-top: 340px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -145,7 +145,7 @@ h1 {
     width: 100%;
     text-align: center;
     display: flex;
-    margin-top: 80px; /*Distancia das caixas dos planos*/
+    margin-top: 120px; /*Distancia das caixas dos planos*/
 }
 .container-planos li::before {
     content: "✓";         
@@ -202,6 +202,16 @@ h1 {
 }
 .titulo-plano{
     font-size: 25px;
+    display: inline-block;
+    background: #dffaf6;
+    color: #0f172a;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 2px solid #7BD1CA;
+    box-shadow: 0 0 10px rgba(123, 209, 202, 0.35);
+    margin: 10px auto 0;
+    text-align: center;
+    width: fit-content;
 }
 /*Lista do que tem em cada plano*/
 .card-lista{
