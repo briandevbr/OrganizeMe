@@ -253,3 +253,54 @@ h1 {
     font-size: 30px;
     font-weight: bold;
 }
+/*Animação cartas*/
+.stack {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 180px;
+    height: 240px;
+    border-radius: 16px;
+    margin-left: -90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #0f172a;
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.16);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+}
+.c1 {
+    background: linear-gradient(135deg, #a5e2db, #e1eeee);
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+.c2 {
+    background: linear-gradient(135deg, #e1eeee, #feffff);
+    transform: rotate(0deg);
+    z-index: 2;
+}
+.c3 {
+    background: linear-gradient(135deg, #feffff, #a5e2db);
+    transform: rotate(6deg);
+    z-index: 3;
+}
+.stack:hover .c1 {
+    transform: translate(-90px, -30px) rotate(-18deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
+.stack:hover .c2 {
+    transform: translate(0, -55px) rotate(0deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
+.stack:hover .c3 {
+    transform: translate(90px, -30px) rotate(18deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
