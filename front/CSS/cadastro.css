@@ -1,74 +1,145 @@
-@font-face{
-  font-family:golos-text;
-  src: url("fontes/Golos-Text.ttf")
-}
-body{
-    
-    background-size: cover;
-    font-family: golos-text;
+@font-face {
+  font-family: 'Kolak';
+  src: url('../fonts/kolak.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.regis{
-    background-color: #DEDEDEDE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 15px;
-    height: 600px;
-    width: 450px;
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.regis {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px;
+}
+
+.regis h1 {
+  font-family: 'Kolak', sans-serif;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  text-align: center;
+}
+
+.usuario, .email, .password {
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Container que segura o ícone e o input juntos meio que colocando um lugar para todos ficarem*/
+.grupo-input {
+  position: relative; /* Garante que os ícones se posicionem dentro deste bloco */
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Ícone do lado esquerdo do input */
+.grupo-input .input-icon {
   position: absolute;
+  left: 15px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 16px;
+  pointer-events: none; /* Permite clicar no input através do ícone */
+  z-index: 2;
 }
-.boxtext{
+
+/* Estilo do campo de texto */
+.boxtext {
+  width: 100%;
+  height: 45px;
   border: 0;
-  border-radius: 5px;
-  width: 375px;
-  height: 30px;
   border-radius: 40px;
-  margin-bottom: 10px;
-  padding-left: 40px;
-  
-  
-  
+  padding-left: 45px; /* Espaço para o ícone não cobrir o texto digitação */
+  padding-right: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
 }
-.botaocad{
-  position: absolute;
-  left: 50%;                     
-  transform: translateX(-50%);   
-  bottom: 15px;
-  width: 400px;
-  height: 60px;
+
+/* Botão de Cadastrar */
+.botaocad { 
+  width: 100%;
+  height: 55px;
   border-radius: 20px;
   border: 0;
-  background-color: #FF6200;
-  font-family: golos-text;
-  font-size: 24px;
+  background-color: #7BD1CA;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease;
 }
-.fa-address-card{
-  font-size: 20px;
-  transform: translateY(-158px) translateX(10px)
-}
-.fa-user{
-  font-size: 20px;
-  transform: translateY(-344px) translateX(-17px)
-}
-.fa-envelope{
-  font-size: 20px;
-  transform: translateY(-280px) translateX(-48px)
-} 
-.fa-building{
-  font-size: 20px;
-  transform: translateY(-218px) translateX(-78px)
 
+.botaocad:hover {
+  background-color: #62beb7;
 }
-.fa-unlock{
-  font-size: 20px;
-  transform: translateY(-98px) translateX(-106px)
+
+/* Link para login */
+.voltarlogin {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }
-.fa-circle-check{
-  font-size: 20px;
-  transform: translateY(-36px) translateX(-136px)
+
+.voltaloglink {
+  font-family: 'Kolak', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Botão de mostrar/ocultar senha */
+.showsenha {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#show-password {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #444;
+}
+
+.btn-show-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  z-index: 5;
 }

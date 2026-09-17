@@ -1,20 +1,48 @@
+
+@font-face {
+  font-family: 'Kolak';
+  src: url('../fonts/kolak.ttf') format('truetype'); /* Ajuste a extensão se for .otf ou .woff2 */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    padding-top: 90px;
-    padding-left: 30px;
+    height: 100vh;
+    width: 100vw;
     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
 }
-
-h1 {
+.container-titulo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 200px;
+    margin-top: 0;
+    margin-left: 45px  ;
+}
+.subtitulo {
+    margin: 0 0 2px 24px;
+    align-self: flex-start;
+    padding: 8px 16px;
     font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    background-color: #b9e8f2;
+    border: 1px solid #7bcbdc;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(58, 155, 176, 0.2);
+}
+h1 {
+    font-family: 'Kolak', sans-serif;
     margin: 0;
     color: rgb(0, 0, 0);
     font-size: 24px;
 }
 
 .titulo {
-    margin-top: 40px;
+    margin-top: 5;
     margin-bottom: 12px;
     font-family: "Inter", sans-serif;
 }
@@ -46,6 +74,7 @@ h1 {
     display: flex;
     align-items: center;       
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -110,4 +139,185 @@ h1 {
     0%, 100% { box-shadow: 0 0 10px #ffffff; }
     50% { box-shadow: 0 0 30px #ffffff; }
 }
+.area-planos {
+    font-family: "Inter", sans-serif;
+}
+.container-titulo-planos{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1300px;
+    margin-top: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-planos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    margin-top: 120px; /*Distancia das caixas dos planos*/
+    perspective: 1200px;
+}
+.container-planos li::before {
+    content: "✓";         
+    color: #10b981;       
+    font-weight: bold;
+    font-size: 25px;
+}
+.plano01{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+.plano02{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+.plano03{
+    background-color: #ffffff;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #7BD1CA;
+}
+.plano-card {
+    opacity: 0;
+    transform: rotateY(90deg);
+    transform-origin: center;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
 
+.plano-card.visivel {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.plano-card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.plano-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .plano-card,
+    .plano-card:nth-child(2),
+    .plano-card:nth-child(3) {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+/*Botão de escolher o plano*/
+.botaop{ 
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 50px;
+    border:0;
+    width: 380px;  
+    cursor: pointer;
+    background-color: #7BD1CA;
+    box-shadow: 0 0 15px #7BD1CA;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+.titulo-plano{
+    font-size: 25px;
+    display: inline-block;
+    background: #dffaf6;
+    color: #0f172a;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 2px solid #7BD1CA;
+    box-shadow: 0 0 10px rgba(123, 209, 202, 0.35);
+    margin: 10px auto 0;
+    text-align: center;
+    width: fit-content;
+}
+/*Lista do que tem em cada plano*/
+.card-lista{
+    list-style: none;
+    padding: 0;
+    text-align: left
+}
+.preco{
+    font-size: 30px;
+    font-weight: bold;
+}
+/*Animação cartas*/
+.stack {
+    position: relative;
+    left: 350px;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 180px;
+    height: 240px;
+    border-radius: 16px;
+    margin-left: -90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #0f172a;
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.16);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+}
+.c1 {
+    background: linear-gradient(135deg, #a5e2db, #e1eeee);
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+.c2 {
+    background: linear-gradient(135deg, #e1eeee, #feffff);
+    transform: rotate(0deg);
+    z-index: 2;
+}
+.c3 {
+    background: linear-gradient(135deg, #feffff, #a5e2db);
+    transform: rotate(6deg);
+    z-index: 3;
+}
+.stack:hover .c1 {
+    transform: translate(-90px, -30px) rotate(-18deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
+.stack:hover .c2 {
+    transform: translate(0, -55px) rotate(0deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
+.stack:hover .c3 {
+    transform: translate(90px, -30px) rotate(18deg);
+    box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
