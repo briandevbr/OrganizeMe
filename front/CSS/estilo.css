@@ -16,8 +16,23 @@ body {
 .container-titulo {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    margin-left: 25px  ;
+    position: relative;
+    top: 200px;
+    margin-top: 0;
+    margin-left: 45px  ;
+}
+.subtitulo {
+    margin: 0 0 2px 24px;
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    background-color: #b9e8f2;
+    border: 1px solid #7bcbdc;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(58, 155, 176, 0.2);
 }
 h1 {
     font-family: 'Kolak', sans-serif;
@@ -27,7 +42,7 @@ h1 {
 }
 
 .titulo {
-    margin-top: 40px;
+    margin-top: 5;
     margin-bottom: 12px;
     font-family: "Inter", sans-serif;
 }
@@ -59,6 +74,7 @@ h1 {
     display: flex;
     align-items: center;       
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -256,6 +272,7 @@ h1 {
 /*Animação cartas*/
 .stack {
     position: relative;
+    left: 350px;
     width: 300px;
     height: 200px;
     margin: 0 auto;
