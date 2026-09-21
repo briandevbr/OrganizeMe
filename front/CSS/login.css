@@ -51,14 +51,23 @@ a {
   font-size: 15px;
   font-weight: bold;
 }
-.btn-submit {
-  border: none;
-  border-radius: 50px;
+.btn-submit { 
   width: 100%;
-  max-width: 450px;
-  padding: 15px;
-  font-size: 18px;
+  max-width: 300px;
+  height: 55px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #7BD1CA;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 20px;
   font-weight: bold;
+  color: #fff;
   cursor: pointer;
   margin-top: 15px;
+  transition: background-color 0.2s ease;
+  margin: 15px auto 0 auto;
+}
+
+.btn-submit:hover {
+  background-color: #62beb7;
 }
