@@ -3,41 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Login</title>
     <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../CSS/login.css" />
+    <script src="https://kit.fontawesome.com/22a8724ea3.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="formulario">
+    <div class="regis">
       <h1>Login</h1>
 
-      <div class="input-group">
+      <div class="email">
         <label for="email">E-mail</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          autocomplete="email"
-          placeholder="Digite seu e-mail"
-          required
-        />
+        <div class="grupo-input">
+        <div class="input-icon"><i class="fa-solid fa-envelope"></i></div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="boxtext"
+            autocomplete="email"
+          />
+        </div>
       </div>
 
-      <div class="input-group">
+      <div class="password">
         <label for="password">Senha</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          autocomplete="current-password"
-          placeholder="Digite sua senha"
-          required
+        <div class="grupo-input">
+          <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="boxtext"
+            autocomplete="current-password"
           />
+          <button type="button" id="showconfirm-password" class="btn-show-password"><i class="fa-regular fa-eye"></i></button>
+        </div>
       </div>
+
+      <div class="registrar">
+        <p>Ainda não possui conta? <a href="cadastro.html">Registre-se</a></p>
+      </div>
+
+      <button type="submit" class="botaocad">Entrar</button>
+
     </div>
-    <div class="registrar">
-      <a href="cadastro.html">Registre-se</a>
-    </div>
-    <button type="submit" class="btn-submit">Entrar</button>
   </body>
 </html>

@@ -1,59 +1,90 @@
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@font-face {
+  font-family: 'Kolak';
+  src: url('../fonts/kolak.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
-  font-size: sanz-serif;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
   background-size: 300% 300%;
   animation: gradientMove 8s ease infinite;
-  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
 }
-h1 {
+
+/* Alterado de .formulario para .regis para manter o padrão */
+.regis {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px;
+}
+
+.regis h1 {
+  font-family: 'Kolak', sans-serif;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
   font-size: 35px;
-  width: 20vw;
-  margin-bottom: 30px;
-}
-.input-group {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 15px;
-}
-label {
-  display: block;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-input {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  font-size: 15px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  font-size: 15px;
-}
-.registrar {
-  margin: 10px;
   text-align: center;
 }
-a {
-  font-size: 15px;
-  font-weight: bold;
+
+.email, .password {
+  margin-bottom: 15px;
 }
-.btn-submit { 
+
+label {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Container que segura o ícone e o input juntos */
+.grupo-input {
+  position: relative;
   width: 100%;
-  max-width: 300px;
+  margin-top: 5px;
+}
+
+/* Ícone do lado esquerdo do input */
+.grupo-input .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Estilo do campo de texto padronizado com a classe .boxtext */
+.boxtext {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-radius: 40px;
+  padding-left: 45px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Botão de Entrar (padronizado com a classe .botaocad) */
+.botaocad { 
+  width: 100%;
   height: 55px;
   border-radius: 20px;
   border: 0;
@@ -65,9 +96,38 @@ a {
   cursor: pointer;
   margin-top: 15px;
   transition: background-color 0.2s ease;
-  margin: 15px auto 0 auto;
 }
 
-.btn-submit:hover {
+.botaocad:hover {
   background-color: #62beb7;
+}
+
+/* Link para registro / rodapé */
+.registrar {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+a {
+  font-family: 'Kolak', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Botão de mostrar/ocultar senha */
+.btn-show-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  z-index: 5;
 }
