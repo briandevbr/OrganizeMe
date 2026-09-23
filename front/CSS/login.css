@@ -102,6 +102,12 @@ label {
   background-color: #62beb7;
 }
 
+.esqueci-senha {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 14px;
+}
+
 /* Link para registro / rodapé */
 .registrar {
   margin-top: 20px;
@@ -131,3 +137,4 @@ a {
   color: #666;
   z-index: 5;
 }
+
