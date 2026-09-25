@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
     <div class="painel">
         <h1>OrganizeMe</h1>
+        <button class="profile-btn" id="profile-btn">
+        <!--acho svg poluido mas da pro gasto por hora -->
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>  <circle cx="12" cy="7" r="4"/></svg>
+
+         </button>
    </div>
 
    <div class="ferramentas">
-        <button class="botaoferra">Add Item</button>
-        <button class="botaoferra">Remove Item</button>
+        <button class="add">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus preview-icon"><path d="M5 12h14"/><path d="M12 5v14"/></svg>add
+
+        </button>
+        <button  class="remove">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus preview-icon"><path d="M5 12h14"/></svg> remove
+        </button>
     </div>
 
    <div class="conteudo">
         <div class="entiquetas">
+                
             <input type="text" id="tags" placeholder="Digite sua tag">
+
         </div>
         <div class="produtos">
+            
            <div class="produto-exemplo">
             <p>Exemplo produto</p>
            </div>

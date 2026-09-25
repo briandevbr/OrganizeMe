@@ -14,13 +14,28 @@ body{
     background: #c1f5de;
     background: linear-gradient(270deg, rgb(161, 243, 206) 2%, rgba(240, 255, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
     height: 50px;
+}   
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
+
+
 .ferramentas{
   background-color: bisque;
   display: flex;
   flex-direction: row;
   margin-top: 60px;
 }
+.add{
+    background-color: #dedede;
+}
+
 .conteudo {
     display: flex;
     background-color: red;
