@@ -14,7 +14,7 @@
         
         <div class="formulario">
             <!-- Tag form corrigida (sem a tag vazia extra) -->
-            <form action="cadastro.html" method="post">
+            <form action="cadastro.html" method="post" id="formulario">
                 
                 <div class="usuario">
                     <label for="nome">Nome Completo:</label> <br>
@@ -55,9 +55,15 @@
                 <p>Já possui conta? <a href="login.html" class="voltaloglink">Entrar</a></p>
             </div>
         </div>
-        <input class="botaocad" type="submit" value="Cadastrar Empresa">
+        <input class="botaocad" type="submit" value="Cadastrar Empresa" id="botaocad">
     </div>
-
+    </form>
+        <div class="erro-senha">
+            <div class="msg-erro" id="erro1"><p>tem menos que 8 caracteres</p></div>
+            <div class="msg-erro" id="erro2"><p>senha precisa de caracteres especiais</p></div>
+            <div class="msg-erro" id="erro3"><p>tem que ter letra Maiuscula</p></div>
+            <div class="msg-erro" id="erro4"><p>não pode ter espaço na senha</p></div>
+        </div>
     <script src="../../back/codigoFonte/cad.js"></script>
     
 </body>

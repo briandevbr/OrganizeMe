@@ -143,3 +143,20 @@ label {
   color: #666;
   z-index: 5;
 }
+/* caixa de mostra a senha aqui e onde troca as cores etc..*/
+.erro-senha {
+  background-color: rgb(164, 245, 199);
+  position: absolute;
+  transform: translateX(-320px) translateY(60px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  color: #333;
+}
+
+.msg-erro {
+  display:none;
+}
+.msg-erro.ativo {
+  display: block;
+}
