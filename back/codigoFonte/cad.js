@@ -7,7 +7,7 @@ const erroSenha = {
   tamanhoMinimo: document.getElementById("erro1"),
   caractereEspecial: document.getElementById("erro2"),
   letraMaiuscula: document.getElementById("erro3"),
-  semEspacos: document.getElementById("erro4"),
+  comNumeros: document.getElementById("erro4"),
 };
 
 //Botão de mostrar senha
@@ -39,33 +39,35 @@ const verificarSenha = document.querySelector("#formulario").addEventListener("s
     erroSenha.tamanhoMinimo.classList.replace("ativo", "msg-erro");
     erroSenha.caractereEspecial.classList.replace("ativo", "msg-erro");
     erroSenha.letraMaiuscula.classList.replace("ativo", "msg-erro");
-    erroSenha.semEspacos.classList.replace("ativo", "msg-erro");
+    erroSenha.comNumeros.classList.replace("ativo", "msg-erro");
 
     const senha = document.getElementById("password");// Regra 1: Checa se a senha possui pelo menos 8 caracteres
-    if (senha.value.length < 8) {
-      console.log("erro: tem menos que 8 caracteres");
+    if (senha.value.length > 8) {
       ValidarSenha = 1;
       erroSenha.tamanhoMinimo.classList.replace("msg-erro", "ativo");
     }
     const temCaracEspecial = /[!@#$%*]/.test(senha.value);// Regra 2: Testa se a senha contém ao menos um caractere especial
-    if (!temCaracEspecial) {
-      console.log("erro: senha precisa de caracteres especiais");
+    if (temCaracEspecial) {
       ValidarSenha = 1;
       erroSenha.caractereEspecial.classList.replace("msg-erro", "ativo");
     }
     const temMaiuscula = /[A-Z]/.test(senha.value);// Regra 3: Testa se a senha contém ao menos uma letra maiúscula (A-Z)
-    if (!temMaiuscula) {
-      console.log("erro: tem que ter letra Maiuscula");
+    if (temMaiuscula) {
       ValidarSenha = 1;
       erroSenha.letraMaiuscula.classList.replace("msg-erro", "ativo");
     }
-    const temEspacoEmBranco = /\s/.test(senha.value);// Regra 4: Garante que NÃO existe nenhum espaço em branco (\s) na senha
-    if (temEspacoEmBranco) {
-      console.log("erro: não pode ter espaço na senha");
+    const temNumero = /\d/.test(senha.value);// Regra 4: Garante que a senha contenha ao menos um número
+    if (temNumero) {
       ValidarSenha = 1;
-      erroSenha.semEspacos.classList.replace("msg-erro", "ativo");
+      erroSenha.comNumeros.classList.replace("msg-erro", "ativo");
     }
-     if (!ValidarSenha) {
+    const temEspacos = /\s/.test(senha.value);// Regra 5: checa se a senha contém espaço
+    if (temEspacos) {
+      ValidarSenha = 1;
+      console.log("senha contem espaço");
+    }
+    if (ValidarSenha === 0) {
       console.log("senha valida");
     }
   });
+ 
