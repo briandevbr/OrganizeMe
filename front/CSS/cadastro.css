@@ -143,3 +143,23 @@ label {
   color: #666;
   z-index: 5;
 }
+
+.msg-erro {
+  display: inline-block;
+  font-size: 12px;
+  color: #919191;
+  background-color: #3A3A3A;
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 10px;
+}
+.ativo{ /* Classe para indicar que a regra da senha foi atendida */
+  display: inline-block;
+  background-color: #342929;
+  font-size: 12px;
+  color: #00FF00;
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: underline
+}

@@ -6,7 +6,7 @@
     <title>registro</title>
     <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/cadastro.css">
-    <script src="https://kit.fontawesome.com/22a8724ea3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="regis">
@@ -14,7 +14,7 @@
         
         <div class="formulario">
             <!-- Tag form corrigida (sem a tag vazia extra) -->
-            <form action="cadastro.html" method="post">
+            <form action="cadastro.html" method="post" id="formulario">
                 
                 <div class="usuario">
                     <label for="nome">Nome Completo:</label> <br>
@@ -38,8 +38,14 @@
                     <div class="grupo-input">
                         <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
                         <input class="boxtext" type="password" id="password"  name="password" required>
-                        <button type="button" id="showpassword" class="btn-show-password"><i class="fa-regular fa-eye"></i></button>
+                        <button type="button" id="showpassword" class="btn-show-password"><i class="fa-regular fa-eye" id="icon"></i></button>
                     </div>
+                    <ul class="regras-senha">
+                            <li class="msg-erro" id="erro1">8 Caracteres</li>
+                            <li class="msg-erro" id="erro2">Caractere especial</li>
+                            <li class="msg-erro" id="erro3">Letra maiúscula</li>
+                            <li class="msg-erro" id="erro4">Número</li>
+                        </ul>
                 </div>
 
                 <div class="password">
@@ -47,17 +53,16 @@
                     <div class="grupo-input">
                         <div class="input-icon"><i class="fa-regular fa-circle-check"></i></div>
                         <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
-                        <button type="button" id="showconfirm-password" class="btn-show-password"><i class="fa-regular fa-eye"></i></button>
+                        <button type="button" id="showconfirm-password" class="btn-show-password"><i class="fa-regular fa-eye" id="icon-confi"></i></button>
                     </div>
                 </div>
-
+        </div>
+        <input class="botaocad" type="submit" value="Cadastrar Empresa" id="botaocad">
             <div class="voltarlogin">
                 <p>Já possui conta? <a href="login.html" class="voltaloglink">Entrar</a></p>
             </div>
-        </div>
-        <input class="botaocad" type="submit" value="Cadastrar Empresa">
     </div>
-
+    </form>
     <script src="../../back/codigoFonte/cad.js"></script>
     
 </body>
