@@ -2,6 +2,7 @@ const VerSenha = document.getElementById("password");
 const VerSenhaConfi = document.getElementById("confirm-password");
 const icon = document.getElementById("icon");
 const iconc = document.getElementById("icon-confi");
+const senhaNconfere = document.getElementById("senha-nao-confere");
 // Tipos de erros de senha no cadastro
 const erroSenha = {
   tamanhoMinimo: document.getElementById("erro1"),
@@ -40,6 +41,8 @@ const verificarSenha = document.querySelector("#formulario").addEventListener("s
     erroSenha.caractereEspecial.classList.replace("ativo", "msg-erro");
     erroSenha.letraMaiuscula.classList.replace("ativo", "msg-erro");
     erroSenha.comNumeros.classList.replace("ativo", "msg-erro");
+    senhaNconfere.classList.replace("senha-nao-confere-ativo", "senha-nao-confere");
+    VerSenhaConfi.classList.replace("boxtext-confi-erro", "boxtext-confi");
 
     const senha = document.getElementById("password");// Regra 1: Checa se a senha possui pelo menos 8 caracteres
     if (senha.value.length > 8) {
@@ -66,8 +69,15 @@ const verificarSenha = document.querySelector("#formulario").addEventListener("s
       ValidarSenha = 1;
       console.log("senha contem espaço");
     }
+    if (VerSenha.value !== VerSenhaConfi.value) {// Regra 6: checa se a senha e a senha confirmada são iguais
+      ValidarSenha = 1;
+       senhaNconfere.classList.replace("senha-nao-confere", "senha-nao-confere-ativo");
+       VerSenhaConfi.classList.replace("boxtext-confi", "boxtext-confi-erro");
+    }
     if (ValidarSenha === 0) {
       console.log("senha valida");
     }
+
   });
  
+  
