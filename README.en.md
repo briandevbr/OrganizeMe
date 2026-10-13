@@ -4,7 +4,7 @@
 
 > 🌐 Leia em [Português](./README.md)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1000&color=2F81F7&center=true&vCenter=true&width=520&height=36&lines=Simple%2C+easy+inventory+control;Design+%E2%86%92+Front+%E2%86%92+Back%2C+in+that+order;Built+as+a+team+by+11+ADS+devs)](#-development-workflow)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1000&color=2F81F7&center=true&vCenter=true&width=520&height=36&lines=Simple%2C+easy+inventory+control;Design+%E2%86%92+Front+%E2%86%92+Back%2C+in+that+order;Built+as+a+team+by+10+ADS+devs)](#-development-workflow)
 
 [![Stack](https://skillicons.dev/icons?i=html,css,js,git,github)](#️-technologies-used)
 
@@ -21,7 +21,7 @@
 
 </div>
 
-**OrganizeMe** is a web platform for financial management and inventory control: login and sign-up screens, subscription plans and a dashboard where the inventory will come to life. It's an academic project built by 22 hands, by the 2nd-period ADS (Systems Analysis and Development) class. **MVP in progress:** the screens and the sign-up validation already exist; back-end integration and inventory control come next.
+**OrganizeMe** is a web platform for financial management and inventory control: login and sign-up screens, subscription plans and a dashboard where the inventory will come to life. It's an academic project built by 20 hands, by the 2nd-period ADS (Systems Analysis and Development) class. **MVP in progress:** the screens and the sign-up validation already exist; back-end integration and inventory control come next.
 
 > [!TIP]
 > **Just joined the team?** Start with the [welcome guide](https://briandevbr.github.io/OrganizeMe/welcome.html) (`welcome.html`, in Portuguese): leadership, terminal, Git, commit conventions and branch rules, with a copy button on every command. Never cloned a repository? [Davi Perrelli's video tutorial](https://youtu.be/VDhH5xvdti0) walks through `git clone` step by step.
@@ -34,6 +34,7 @@
 - [🗂️ Project Structure - tree](#️-project-structure---tree)
 - [🧭 Development workflow](#-development-workflow)
 - [👥 Team and context](#-team-and-context)
+- [📊 Project in numbers](#-project-in-numbers)
 - [🔄 How it works](#-how-it-works)
 - [🗄️ Data model](#️-data-model)
 - [📰 Business Rules](#-business-rules)
@@ -137,7 +138,7 @@ flowchart LR
 
 ## 👥 Team and context
 
-**Collaborative academic project** by 2nd-period Systems Analysis and Development (ADS) students at Centro Universitário Maurício de Nassau (Olinda/PE), for the Coding course led by professor Filipe Araújo. The project belongs to the whole group: 11 people, two squads and a design stage that opens every cycle.
+**Collaborative academic project** by 2nd-period Systems Analysis and Development (ADS) students at Centro Universitário Maurício de Nassau (Olinda/PE), for the Coding course led by professor Filipe Araújo. The project belongs to the whole group: 10 people, two squads and a design stage that opens every cycle.
 
 ### 🧑‍✈️ Leadership
 
@@ -164,26 +165,90 @@ flowchart LR
 
 <table>
   <tr>
-    <td align="center" width="25%"><a href="https://github.com/briandevbr"><img src="https://github.com/briandevbr.png?size=100" width="80" alt="David Brian"/><br/><b>David Brian</b></a><br/><sub>👑 Leadership · ⚙️ Back-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/DaviPerrelli15"><img src="https://github.com/DaviPerrelli15.png?size=100" width="80" alt="Davi Perrelli"/><br/><b>Davi Perrelli</b></a><br/><sub>🤝 Co-leadership · 💻 Front-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/rayannemelo222"><img src="https://github.com/rayannemelo222.png?size=100" width="80" alt="Rayanne Melo"/><br/><b>Rayanne Melo</b></a><br/><sub>🎨 Design · 💻 Front-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/thiagoguimaraessf-afk"><img src="https://github.com/thiagoguimaraessf-afk.png?size=100" width="80" alt="Thiago Guimarães"/><br/><b>Thiago Guimarães</b></a><br/><sub>⚙️ Back-end · 💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/briandevbr"><img src="https://github.com/briandevbr.png?size=100" width="80" alt="David Brian"/><br/><b>David Brian</b></a><br/><sub>👑 Leadership · ⚙️ Back-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/DaviPerrelli15"><img src="https://github.com/DaviPerrelli15.png?size=100" width="80" alt="Davi Perrelli"/><br/><b>Davi Perrelli</b></a><br/><sub>🤝 Co-leadership · 💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/rayannemelo222"><img src="https://github.com/rayannemelo222.png?size=100" width="80" alt="Rayanne Melo"/><br/><b>Rayanne Melo</b></a><br/><sub>🎨 Design · 💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/thiagoguimaraessf-afk"><img src="https://github.com/thiagoguimaraessf-afk.png?size=100" width="80" alt="Thiago Guimarães"/><br/><b>Thiago Guimarães</b></a><br/><sub>⚙️ Back-end · 💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/carloshenrique1611"><img src="https://github.com/carloshenrique1611.png?size=100" width="80" alt="Carlos Henrique"/><br/><b>Carlos Henrique</b></a><br/><sub>⚙️ Back-end</sub></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="https://github.com/carloshenrique1611"><img src="https://github.com/carloshenrique1611.png?size=100" width="80" alt="Carlos Henrique"/><br/><b>Carlos Henrique</b></a><br/><sub>⚙️ Back-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/miguelarthur202"><img src="https://github.com/miguelarthur202.png?size=100" width="80" alt="Miguel Arthur"/><br/><b>Miguel Arthur</b></a><br/><sub>⚙️ Back-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/gui-cauadev"><img src="https://github.com/gui-cauadev.png?size=100" width="80" alt="Guilherme Cauã"/><br/><b>Guilherme Cauã</b></a><br/><sub>💻 Front-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/kauaheinzel"><img src="https://github.com/kauaheinzel.png?size=100" width="80" alt="Kauã Heinzel"/><br/><b>Kauã Heinzel</b></a><br/><sub>💻 Front-end</sub></td>
-  </tr>
-  <tr>
-    <td align="center" width="25%"><a href="https://github.com/PedroMadsonDevBr"><img src="https://github.com/PedroMadsonDevBr.png?size=100" width="80" alt="Pedro Madson"/><br/><b>Pedro Madson</b></a><br/><sub>💻 Front-end</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/BigEddie-png"><img src="https://github.com/BigEddie-png.png?size=100" width="80" alt="Eduardo Willian"/><br/><b>Eduardo Willian</b></a><br/><sub>🧩 OrganizeMe team</sub></td>
-    <td align="center" width="25%"><a href="https://github.com/v1ninato"><img src="https://github.com/v1ninato.png?size=100" width="80" alt="Renato Vinícius"/><br/><b>Renato Vinícius</b></a><br/><sub>🧩 OrganizeMe team</sub></td>
-    <td align="center" width="25%"></td>
+    <td align="center" width="20%"><a href="https://github.com/miguelarthur202"><img src="https://github.com/miguelarthur202.png?size=100" width="80" alt="Miguel Arthur"/><br/><b>Miguel Arthur</b></a><br/><sub>⚙️ Back-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/gui-cauadev"><img src="https://github.com/gui-cauadev.png?size=100" width="80" alt="Guilherme Cauã"/><br/><b>Guilherme Cauã</b></a><br/><sub>💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/kauaheinzel"><img src="https://github.com/kauaheinzel.png?size=100" width="80" alt="Kauã Heinzel"/><br/><b>Kauã Heinzel</b></a><br/><sub>💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/PedroMadsonDevBr"><img src="https://github.com/PedroMadsonDevBr.png?size=100" width="80" alt="Pedro Madson"/><br/><b>Pedro Madson</b></a><br/><sub>💻 Front-end</sub></td>
+    <td align="center" width="20%"><a href="https://github.com/v1ninato"><img src="https://github.com/v1ninato.png?size=100" width="80" alt="Renato Vinícius"/><br/><b>Renato Vinícius</b></a><br/><sub>🧩 OrganizeMe team</sub></td>
   </tr>
 </table>
 
 **Tutor:** [Filipe Araújo](https://github.com/FilipeHSAraujo)
+
+---
+
+## 📊 Project in numbers
+
+| 👥 People | 🖥️ Screens | ✅ MVP steps | 📝 Commits on `main` | 📦 Sample products |
+|:---:|:---:|:---:|:---:|:---:|
+| **10** | **4** + guide | **9 of 18** | **82** | **15** (4,230 units) |
+
+**Team pace**
+
+```mermaid
+%%{init: {"xyChart": {"width": 760, "height": 420}, "themeVariables": {"xyChart": {"plotColorPalette": "#2F81F7"}}}}%%
+xychart-beta
+  title "Commits per week on main (no merges)"
+  x-axis "Week, starting Monday (dd/mm)" ["24/08", "31/08", "07/09", "14/09", "21/09", "28/09", "05/10", "12/10"]
+  y-axis "Commits" 0 --> 35
+  bar [30, 17, 4, 13, 9, 6, 0, 3]
+```
+
+<sub>Counted up to 13/10/2026, by author date. The August kickoff concentrates the screen build-out. The week of 05/10 had no commits on `main` because work continued on the `Front-End` branch (password confirmation).</sub>
+
+**Sample inventory**
+
+```mermaid
+%%{init: {"xyChart": {"width": 760, "height": 560}, "themeVariables": {"xyChart": {"plotColorPalette": "#2F81F7"}}}}%%
+xychart-beta horizontal
+  title "Units in stock per backpack (inventario.json)"
+  x-axis ["Gym sack", "Minimalist", "Executive", "Kids school", "Maternity", "Waterproof USB", "Anti-theft", "Pet", "Women's", "Tactical 45L", "Gamer", "Delivery", "Waterproof", "Vintage", "Camping 50L"]
+  y-axis "Units" 0 --> 850
+  bar [800, 600, 500, 400, 350, 300, 250, 200, 180, 150, 120, 110, 100, 90, 80]
+```
+
+<sub>Sample data used by the dashboard: 15 backpacks and 4,230 units in total. The minimum-stock alert (RN03) will work on these numbers.</sub>
+
+<details>
+<summary>📋 See the chart numbers as tables</summary>
+
+| Week (Monday, dd/mm) | Commits |
+|---|---:|
+| 24/08 | 30 |
+| 31/08 | 17 |
+| 07/09 | 4 |
+| 14/09 | 13 |
+| 21/09 | 9 |
+| 28/09 | 6 |
+| 05/10 | 0 |
+| 12/10 | 3 |
+
+| Product (name as in the file) | `id` | Units |
+|---|:---:|---:|
+| Mochila Saco Esportiva Academia Treino Impermeável Leve | 13 | 800 |
+| Mochila Minimalista Transversal Bag Ombro Com Trava De Segurança | 11 | 600 |
+| Mochila Executiva Expansível Mala Viagem Unissex Lançamento | 2 | 500 |
+| Mochila Escolar Infantil Com Rodinhas E Lancheira Térmica Kit | 7 | 400 |
+| Mochila Maternidade Multifuncional Térmica Para Bebê | 9 | 350 |
+| Mochila Impermeável Com Porta Usb Para Trabalho E Viagem | 3 | 300 |
+| Mochila Antifurto Escolar Executiva Impermeável Entrada Usb | 4 | 250 |
+| Mochila Pet Transporte Cão E Gato Com Visor Panorâmico | 14 | 200 |
+| Mochila Feminina Couro Ecológico Trabalho Viagem Elegante | 5 | 180 |
+| Mochila Tática Militar Camuflada Lonas Reforçada 45L | 10 | 150 |
+| Mochila Gamer Para Notebook Até 17 Polegadas Acolchoada | 8 | 120 |
+| Mochila Térmica Delivery Entregador Marmita E Bebidas | 15 | 110 |
+| Mochila jiesipote À Prova D'água Reforçada Expansível | 1 | 100 |
+| Mochila De Lona Vintage Masculina Estilo Casual Notebook | 12 | 90 |
+| Mochila Esportiva Camping Trilha Ciclismo 50 Litros Impermeável | 6 | 80 |
+
+</details>
 
 ---
 
