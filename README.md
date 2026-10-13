@@ -4,15 +4,27 @@
 
 > 🌐 Read this in [English](./README.en.md)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1000&color=2F81F7&center=true&vCenter=true&width=520&height=36&lines=Controle+de+estoque+simples+e+f%C3%A1cil;Projeto+acad%C3%AAmico+feito+por+11+devs;Pr%C3%B3ximo%3A+login+%E2%86%92+dashboard+%E2%86%92+estoque)](#-como-funciona)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1000&color=2F81F7&center=true&vCenter=true&width=520&height=36&lines=Controle+de+estoque+simples+e+f%C3%A1cil;Design+%E2%86%92+Front+%E2%86%92+Back%2C+nessa+ordem;Feito+em+equipe+por+11+devs+de+ADS)](#-fluxo-de-desenvolvimento)
 
 [![Stack](https://skillicons.dev/icons?i=html,css,js,git,github)](#️-tecnologias-usadas)
 
-`HTML · CSS · JavaScript puro · sem build · licença não especificada`
+[![Versão web](https://img.shields.io/badge/vers%C3%A3o%20web-online-2F81F7?style=flat-square&logo=github&logoColor=white)](https://briandevbr.github.io/OrganizeMe/)
+[![Tutorial git clone](https://img.shields.io/badge/tutorial-git%20clone-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/VDhH5xvdti0)
+[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-yellow?style=flat-square)](./LICENSE)
+[![Status](https://img.shields.io/badge/status-MVP%20em%20constru%C3%A7%C3%A3o-orange?style=flat-square)](#-funcionalidades)
+[![ADS](https://img.shields.io/badge/ADS-2%C2%BA%20per%C3%ADodo-8B5CF6?style=flat-square)](#-time-e-contexto)
+[![Último commit](https://img.shields.io/github/last-commit/briandevbr/OrganizeMe?style=flat-square&label=%C3%BAltimo%20commit)](https://github.com/briandevbr/OrganizeMe/commits/main)
+
+`HTML · CSS · JavaScript puro · sem build · MIT`
+
+**[🌐 Abrir a versão web](https://briandevbr.github.io/OrganizeMe/)** &nbsp;·&nbsp; **[🎬 Tutorial de git clone](https://youtu.be/VDhH5xvdti0)** &nbsp;·&nbsp; **[👋 Guia de boas-vindas](https://briandevbr.github.io/OrganizeMe/welcome.html)**
 
 </div>
 
-O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de estoque, com telas de login, cadastro e regras de negócio para movimentação de produtos. **Projeto em desenvolvimento (MVP em construção):** as telas do front e a validação de cadastro já existem; a integração com o back-end e o controle de estoque vêm a seguir.
+O **OrganizeMe** é uma plataforma web de gestão financeira e controle de estoque: telas de login e cadastro, planos de assinatura e um dashboard onde o inventário vai ganhar vida. É um projeto acadêmico construído a 22 mãos pela turma do 2º período de ADS. **MVP em construção:** as telas e a validação do cadastro já existem; a integração com o back-end e o controle de estoque vêm a seguir.
+
+> [!TIP]
+> **Chegou agora no time?** Comece pelo [guia de boas-vindas](https://briandevbr.github.io/OrganizeMe/welcome.html) (`welcome.html`): liderança, terminal, Git, padrão de commits e regras das branches, com botão de copiar em cada comando. Nunca clonou um repositório? O [tutorial em vídeo do Davi Perrelli](https://youtu.be/VDhH5xvdti0) mostra o `git clone` passo a passo.
 
 ---
 
@@ -20,7 +32,8 @@ O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de
 
 - [🗂️ Estrutura do Projeto](#️-estrutura-do-projeto)
 - [🗂️ Estrutura do Projeto - tree](#️-estrutura-do-projeto---tree)
-- [👥 Contexto](#-contexto)
+- [🧭 Fluxo de desenvolvimento](#-fluxo-de-desenvolvimento)
+- [👥 Time e contexto](#-time-e-contexto)
 - [🔄 Como funciona](#-como-funciona)
 - [🗄️ Modelo de dados](#️-modelo-de-dados)
 - [📰 Regras de Negócio](#-regras-de-negócio)
@@ -36,22 +49,25 @@ O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de
 
 | Caminho | Descrição |
 |---|---|
-| `back/bancoDeDados/dadosPessoais.json` | Destino previsto para os dados de cadastro dos usuários — hoje vazio, pois ainda não há servidor gravando nele |
+| `index.html` | Página inicial, na raiz para o GitHub Pages servir: chamada do produto, cards animados, 3 planos (Free, Intermediário e Avançado) e botões Ajuda, Registrar e Login |
+| `welcome.html` | Guia de boas-vindas para quem chega no time: fluxo de trabalho, liderança, primeiro dia, terminal, Git, commits, ferramentas e regras das branches. Página independente, com estilos e scripts embutidos |
+| `back/bancoDeDados/dadosPessoais.json` | Destino previsto para os dados de cadastro dos usuários. Hoje está vazio, porque ainda não há servidor gravando nele |
 | `back/bancoDeDados/inventario.json` | Inventário de exemplo com 15 mochilas, cada uma com `id`, `quantidade` e `preco` (ver [Modelo de dados](#️-modelo-de-dados)) |
-| `back/codigoFonte/cad.js` | Botões de mostrar/ocultar senha dos campos "Senha" e "Confirmar Senha" da tela de cadastro (carregado por `cadastro.html`) |
-| `back/codigoFonte/cadastro.js` | Validação do cadastro — formato do e-mail, regras de senha e nome de usuário sem espaço; exporta `login()`, ainda não chamado por nenhuma página |
-| `front/CSS/cadastro.css` | Estilos da tela de cadastro: fundo em gradiente animado, inputs com ícone e títulos na fonte Kolak |
+| `back/codigoFonte/cad.js` | Script da tela de cadastro: mostrar/ocultar senha nos campos "Senha" e "Confirmar Senha" e indicadores visuais das regras de senha ao enviar o formulário |
+| `back/codigoFonte/cadastro.js` | Módulo de validação do cadastro (formato do e-mail, regras de senha e usuário sem espaço). Exporta `login()`, que ainda não é chamado por nenhuma página |
+| `back/codigoFonte/login.js` | Mostrar/ocultar senha da tela de login |
+| `front/CSS/cadastro.css` | Estilos do cadastro: fundo em gradiente animado, inputs com ícone, títulos na fonte Kolak e os indicadores das regras de senha (`.msg-erro` / `.ativo`) |
 | `front/CSS/dashboard.css` | Estilos do dashboard: barra superior fixa em gradiente, faixa de ferramentas e área de produtos |
 | `front/CSS/estilo.css` | Estilos da página inicial: gradiente animado, botões com efeito *pulse*, cards que se abrem no hover e cards de planos com animação de entrada |
 | `front/CSS/login.css` | Estilos da tela de login com fundo em gradiente animado |
-| `front/CSS/fontes/Golos-Text.ttf` | Fonte Golos Text — o arquivo está no repo, mas ainda não há `@font-face` carregando ele |
+| `front/CSS/fontes/Golos-Text.ttf` | Fonte Golos Text. O arquivo está no repo, mas nenhum `@font-face` carrega ele ainda |
 | `front/fonts/KOLAK.ttf` | Fonte Kolak, usada nos títulos via `@font-face` |
-| `front/HTML/cadastro.html` | Formulário "Criar conta": nome completo, e-mail, senha e confirmação de senha |
-| `front/HTML/dashboard.html` | Dashboard v0.1-alpha: barra com botão de perfil, botões Add/Remove Item, campo de tags e área de produtos (só layout) |
-| `front/HTML/index.html` | Página inicial: chamada do produto, 3 planos (Free, Intermediário e Avançado) e botões Ajuda, Registrar e Login |
-| `front/HTML/login.html` | Tela de login com e-mail, senha e link para o cadastro |
+| `front/HTML/cadastro.html` | Formulário "Criar conta": nome completo, e-mail, senha com indicadores de regra e confirmação de senha |
+| `front/HTML/dashboard.html` | Dashboard v0.1-alpha: barra com botão de perfil, botões add/remove, campo de tags e área de produtos (só layout) |
+| `front/HTML/login.html` | Tela de login: e-mail, senha com mostrar/ocultar, link "Esqueci minha senha" e atalho para o cadastro |
 | `.gitignore` | Ignora arquivos de sistema (`.DS_Store`, `Thumbs.db`), `node_modules/`, `.env` e `.vscode/` |
-| `Icone.ico` | Favicon usado pelas 4 páginas |
+| `Icone.ico` | Favicon da página inicial, do cadastro, do login e do guia de boas-vindas |
+| `LICENSE` | Texto da licença MIT do projeto |
 | `README.en.md` | Esta documentação em inglês |
 | `README.md` | Esta documentação em português |
 
@@ -67,7 +83,8 @@ O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de
 │  │  └── 📈 inventario.json
 │  └── 📁 codigoFonte
 │     ├── ⚙️ cad.js
-│     └── ⚙️ cadastro.js
+│     ├── ⚙️ cadastro.js
+│     └── ⚙️ login.js
 ├── 📁 front
 │  ├── 📁 CSS
 │  │  ├── 📁 fontes
@@ -81,33 +98,90 @@ O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de
 │  └── 📁 HTML
 │     ├── 🌐 cadastro.html
 │     ├── 🌐 dashboard.html
-│     ├── 🌐 index.html
 │     └── 🌐 login.html
 ├── 🔧 .gitignore
 ├── 🖼️ Icone.ico
+├── 🌐 index.html
+├── 🗒️ LICENSE
 ├── 🇺🇸 README.en.md
-└── 🇧🇷 README.md
+├── 🇧🇷 README.md
+└── 🌐 welcome.html
 ```
 
 ---
 
-## 👥 Contexto
+## 🧭 Fluxo de desenvolvimento
 
-**Projeto acadêmico colaborativo** desenvolvido por alunos do 2º período de Análise e Desenvolvimento de Sistemas (ADS) do Centro Universitário Maurício de Nassau (Olinda/PE), na disciplina de Coding do professor Filipe Araújo. São 11 pessoas na equipe; o repositório é mantido por David Brian.
+Toda funcionalidade do OrganizeMe percorre o mesmo caminho, **sempre nesta ordem**. Uma etapa só começa quando a anterior entrega.
 
-**Equipe de desenvolvimento**
+```mermaid
+flowchart LR
+  A["🎨 Design<br/>wireframe no papel<br/>(Rayanne)"] -->|wireframe pronto| B["🧠 Brainstorming<br/>o grupo avalia,<br/>discute e decide"]
+  B -->|alterações definidas| C["💻 Front-end<br/>telas, HTML e CSS<br/>branch Front-End"]
+  C -->|estrutura pronta| D["⚙️ Back-end<br/>lógica e dados<br/>branch backEnd"]
+  D -->|Pull Request revisado| E["🚀 main<br/>versão oficial<br/>GitHub Pages"]
+  classDef etapa stroke:#2f81f7,stroke-width:2px
+  class A,B,C,D,E etapa
+```
 
-- [David Brian](https://github.com/briandevbr)
-- [Davi Perrelli](https://github.com/DaviPerrelli15)
-- [Thiago Guimarães](https://github.com/thiagoguimaraessf-afk)
-- [Rayanne Melo](https://github.com/rayannemelo222)
-- [Kauã Heinzel](https://github.com/kauaheinzel)
-- [Guilherme Cauã](https://github.com/gui-cauadev)
-- [Miguel Arthur](https://github.com/miguelarthur202)
-- [Carlos Henrique](https://github.com/carloshenrique1611)
-- [Eduardo Willian](https://github.com/BigEddie-png)
-- [Renato Vinícius](https://github.com/v1ninato)
-- [Pedro Madson](https://github.com/PedroMadsonDevBr)
+<sub>Cada seta é uma entrega: sem ela, a etapa seguinte não começa. Front e Back chegam na `main` por Pull Request revisado pela liderança.</sub>
+
+| Etapa | Quem conduz | O que sai dela | Regra de passagem |
+|---|---|---|---|
+| 🎨 **1. Design** | Rayanne Melo | Wireframe da tela, desenhado no papel | O projeto só avança depois desta etapa |
+| 🧠 **2. Brainstorming** | O grupo inteiro | Decisão do que muda em relação ao wireframe | Decidido em grupo, antes de abrir o editor |
+| 💻 **3. Front-end** | Esquadrão Front-end | Telas, HTML, CSS e páginas na branch `Front-End` | Estrutura pronta antes de o back entrar |
+| ⚙️ **4. Back-end** | Esquadrão Back-end | Lógica e dados aplicados sobre a estrutura pronta, na branch `backEnd` | Entra na `main` só por Pull Request revisado |
+
+---
+
+## 👥 Time e contexto
+
+**Projeto acadêmico colaborativo** do 2º período de Análise e Desenvolvimento de Sistemas (ADS) do Centro Universitário Maurício de Nassau (Olinda/PE), na disciplina de Coding do professor Filipe Araújo. O projeto é de todo o grupo: 11 pessoas, dois esquadrões e uma etapa de design que abre cada ciclo.
+
+### 🧑‍✈️ Liderança
+
+| Papel | Quem |
+|---|---|
+| 👑 Líder Geral do Repositório · Líder do Esquadrão Back-end | [David Brian](https://github.com/briandevbr) |
+| 🤝 Co-líder do Repositório · Líder do Esquadrão Front-end | [Davi Perrelli](https://github.com/DaviPerrelli15) |
+| 🎨 Design: wireframes que abrem cada ciclo | [Rayanne Melo](https://github.com/rayannemelo222) |
+
+### ⚔️ Esquadrões
+
+| ⚙️ Esquadrão Back-end | 💻 Esquadrão Front-end |
+|---|---|
+| **David Brian** (líder) | **Davi Perrelli** (líder) |
+| Carlos Henrique | Guilherme Cauã |
+| Thiago Guimarães | Kauã Heinzel |
+| Miguel Arthur | Thiago Guimarães |
+| | Pedro Madson |
+| | Rayanne Melo |
+
+<sub>Thiago Guimarães atua nos dois esquadrões.</sub>
+
+### 🌟 Quem constrói o OrganizeMe
+
+<table>
+  <tr>
+    <td align="center" width="25%"><a href="https://github.com/briandevbr"><img src="https://github.com/briandevbr.png?size=100" width="80" alt="David Brian"/><br/><b>David Brian</b></a><br/><sub>👑 Liderança · ⚙️ Back-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/DaviPerrelli15"><img src="https://github.com/DaviPerrelli15.png?size=100" width="80" alt="Davi Perrelli"/><br/><b>Davi Perrelli</b></a><br/><sub>🤝 Co-liderança · 💻 Front-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/rayannemelo222"><img src="https://github.com/rayannemelo222.png?size=100" width="80" alt="Rayanne Melo"/><br/><b>Rayanne Melo</b></a><br/><sub>🎨 Design · 💻 Front-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/thiagoguimaraessf-afk"><img src="https://github.com/thiagoguimaraessf-afk.png?size=100" width="80" alt="Thiago Guimarães"/><br/><b>Thiago Guimarães</b></a><br/><sub>⚙️ Back-end · 💻 Front-end</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><a href="https://github.com/carloshenrique1611"><img src="https://github.com/carloshenrique1611.png?size=100" width="80" alt="Carlos Henrique"/><br/><b>Carlos Henrique</b></a><br/><sub>⚙️ Back-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/miguelarthur202"><img src="https://github.com/miguelarthur202.png?size=100" width="80" alt="Miguel Arthur"/><br/><b>Miguel Arthur</b></a><br/><sub>⚙️ Back-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/gui-cauadev"><img src="https://github.com/gui-cauadev.png?size=100" width="80" alt="Guilherme Cauã"/><br/><b>Guilherme Cauã</b></a><br/><sub>💻 Front-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/kauaheinzel"><img src="https://github.com/kauaheinzel.png?size=100" width="80" alt="Kauã Heinzel"/><br/><b>Kauã Heinzel</b></a><br/><sub>💻 Front-end</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><a href="https://github.com/PedroMadsonDevBr"><img src="https://github.com/PedroMadsonDevBr.png?size=100" width="80" alt="Pedro Madson"/><br/><b>Pedro Madson</b></a><br/><sub>💻 Front-end</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/BigEddie-png"><img src="https://github.com/BigEddie-png.png?size=100" width="80" alt="Eduardo Willian"/><br/><b>Eduardo Willian</b></a><br/><sub>🧩 Equipe OrganizeMe</sub></td>
+    <td align="center" width="25%"><a href="https://github.com/v1ninato"><img src="https://github.com/v1ninato.png?size=100" width="80" alt="Renato Vinícius"/><br/><b>Renato Vinícius</b></a><br/><sub>🧩 Equipe OrganizeMe</sub></td>
+    <td align="center" width="25%"></td>
+  </tr>
+</table>
 
 **Tutor:** [Filipe Araújo](https://github.com/FilipeHSAraujo)
 
@@ -118,32 +192,37 @@ O OrganizeMe se propõe a ser uma plataforma de gestão financeira e controle de
 ```mermaid
 flowchart LR
   A["index.html<br/>home + planos"] --> B["cadastro.html<br/>+ cad.js"]
-  A --> C["login.html"]
+  A --> C["login.html<br/>+ login.js"]
   B -.-> D["cadastro.js<br/>validação"]
   D -.-> E["dadosPessoais.json<br/>usuários"]
   C -.-> F["dashboard.html<br/>estoque"]
+  F -.-> G["inventario.json<br/>15 produtos"]
   classDef done stroke:#2f81f7,stroke-width:2px
   classDef todo stroke-dasharray:5 5
-  class A,B,C,D,F done
+  class A,B,C,D,F,G done
   class E todo
 ```
 
 <sub>Borda azul = já existe no código · borda tracejada = próximas etapas · seta pontilhada = ligação ainda não feita</sub>
 
-A navegação entre as telas já funciona: da página inicial, os botões Registrar e Login (e os botões dos planos) levam ao cadastro e ao login. O que falta é ligar as peças — o formulário de cadastro ainda não chama a validação, o login ainda não leva ao dashboard e nada é gravado em JSON.
+A navegação entre as telas já funciona: da página inicial, os botões Registrar e Login (e os botões dos planos) levam ao cadastro e ao login, e as duas telas se linkam entre si. Na tela de cadastro, `cad.js` acende em verde cada regra de senha atendida (8 caracteres, caractere especial, letra maiúscula e número) quando você clica em **Cadastrar Empresa**. O que falta é ligar as peças: o formulário ainda não chama `cadastro.js`, o login ainda não leva ao dashboard e nada é gravado em JSON.
 
-A parte mais interessante do código é a validação em `cadastro.js`: uma cadeia de checagens com retorno antecipado. Cada regra que falha devolve `{ erro }` com a mensagem daquela regra e para ali; só quando tudo passa a função devolve `{ dados }`, com e-mail e usuário já sem espaços nas pontas. As regras rodam nesta ordem: e-mail válido → senha com 8+ caracteres → caractere especial (`!@#$%*`) → letra maiúscula → senha sem espaço → usuário sem espaço.
+A parte mais interessante do código é a validação em `cadastro.js`: uma cadeia de checagens com retorno antecipado. Cada regra que falha devolve `{ erro }` com a mensagem daquela regra e para ali; só quando tudo passa a função devolve `{ dados }`, com e-mail e usuário já sem espaços nas pontas. A ordem é: e-mail válido → senha com 8+ caracteres → caractere especial (`!@#$%*`) → letra maiúscula → senha sem espaço → usuário sem espaço.
 
 Saída real (Node.js 22):
 
 ```text
-login("ana@empresa",        "Senha@123", "ana")        → { erro: "email invalido" }
-login("ana@empresa.com",    "senha1",    "ana")        → { erro: "a senha precisa ter mais de 8 caracteres" }
-login("ana@empresa.com",    "senha123",  "ana")        → { erro: "1 caractere especial ex: !@#$%*" }
-login("ana@empresa.com",    "senha@123", "ana")        → { erro: "precisa de 1 letra maiuscula" }
-login("ana@empresa.com",    "Senha@123", "ana souza")  → { erro: "usuario nao pode conter espaco" }
-login("  ana@empresa.com ", "Senha@123", "  ana  ")    → { dados: { email: "ana@empresa.com", senha: "Senha@123", username: "ana" } }
+login("ana@empresa",        "Senha@123",  "ana")        → { erro: "email invalido" }
+login("ana@empresa.com",    "senha1",     "ana")        → { erro: "a senha precisa ter mais de 8 caracteres" }
+login("ana@empresa.com",    "senha123",   "ana")        → { erro: "1 caractere especial ex: !@#$%*" }
+login("ana@empresa.com",    "senha@123",  "ana")        → { erro: "precisa de 1 letra maiuscula" }
+login("ana@empresa.com",    "Senha@ 123", "ana")        → { erro: "a senha nao pode ter espacos em branco" }
+login("ana@empresa.com",    "Senha@123",  "ana souza")  → { erro: "usuario nao pode conter espaco" }
+login("  ana@empresa.com ", "Senha@123",  "  ana  ")    → { dados: { email: "ana@empresa.com", senha: "Senha@123", username: "ana" } }
 ```
+
+> [!NOTE]
+> As regras da tela (`cad.js`) e do módulo (`cadastro.js`) ainda não são idênticas: a tela pede número e o módulo não. Por isso `login("ana@empresa.com", "Senha@ab", "ana")` passa no módulo. Unificar as duas está nas [Funcionalidades](#-funcionalidades).
 
 ---
 
@@ -151,19 +230,19 @@ login("  ana@empresa.com ", "Senha@123", "  ana  ")    → { dados: { email: "an
 
 Por enquanto os "bancos" são arquivos JSON em `back/bancoDeDados/`.
 
-**`inventario.json`** — objeto `produtos`, em que a chave é o nome do produto:
+**`inventario.json`**: objeto `produtos`, em que a chave é o nome do produto.
 
 | Campo | Tipo no arquivo | Exemplo | Observação |
 |---|---|---|---|
 | *(chave)* | texto | `"Mochila Gamer Para Notebook Até 17 Polegadas Acolchoada"` | Nome completo do produto |
-| `id` | texto | `"8"` | Sequencial de `"1"` a `"15"`, sem repetição — base para a RN04 |
+| `id` | texto | `"8"` | Sequencial de `"1"` a `"15"`, sem repetição. É a base para a RN04 |
 | `quantidade` | texto | `"120"` | De 80 a 800 unidades por produto; 4.230 no total |
 | `preco` | texto | `"289"` | Preço em reais, de R$ 35 a R$ 289 |
 
 - **Cobertura:** 15 produtos, todos mochilas.
-- **Peculiaridade:** os números estão gravados como texto, então precisam de conversão antes de somar ou comparar — como texto, `"80" > "100"` dá verdadeiro.
+- **Peculiaridade:** os números estão gravados como texto, então precisam de conversão antes de somar ou comparar. Como texto, `"80" > "100"` dá verdadeiro.
 
-**`dadosPessoais.json`** — arquivo vazio (0 bytes), reservado para os usuários cadastrados.
+**`dadosPessoais.json`**: arquivo vazio (0 bytes), reservado para os usuários cadastrados.
 
 ---
 
@@ -179,25 +258,30 @@ Por enquanto os "bancos" são arquivos JSON em `back/bancoDeDados/`.
 
 Além disso, o escopo de negócio prevê: reserva temporária de produtos durante o checkout, registro do prazo de expiração da reserva, atualização do estoque após confirmação de pagamento, baixa do estoque na expedição do pedido, e liberação automática de produtos reservados quando a reserva expira ou o pagamento não é confirmado.
 
-As regras ainda não estão implementadas — elas são o escopo do dashboard de estoque (ver [Funcionalidades](#-funcionalidades)).
+As regras ainda não estão implementadas. Elas são o escopo do dashboard de estoque (ver [Funcionalidades](#-funcionalidades)).
 
 ---
 
 ## ⚙️ Tecnologias usadas
 
-- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) — estrutura das 4 páginas
-- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS) — layout, gradientes animados com `@keyframes`, efeito *pulse* nos botões e cards com transformações no hover
-- JavaScript puro — mostrar/ocultar senha, animação de entrada dos planos com [IntersectionObserver](https://developer.mozilla.org/pt-BR/docs/Web/API/Intersection_Observer_API) e validação do cadastro (módulo ES)
-- [Font Awesome](https://fontawesome.com/) — ícones do cadastro e do dashboard
-- [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts) — texto da página inicial; a fonte Kolak, local, fica nos títulos
-- Git + GitHub — versionamento e fluxo de Pull Request da equipe
-- [Node.js](https://nodejs.org/) (planejado — servidor do back-end e gravação dos dados em JSON)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML): estrutura das 5 páginas (home, cadastro, login, dashboard e guia de boas-vindas)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS): layout, gradientes animados com `@keyframes`, efeito *pulse* nos botões e cards com transformações no hover
+- JavaScript puro: mostrar/ocultar senha, indicadores das regras de senha, animação dos planos com [IntersectionObserver](https://developer.mozilla.org/pt-BR/docs/Web/API/Intersection_Observer_API), validação do cadastro (módulo ES) e a interatividade do guia de boas-vindas
+- [Font Awesome](https://fontawesome.com/) 6 (CDN): ícones das telas de cadastro e login
+- [Lucide](https://lucide.dev/): ícones do dashboard, em SVG embutido no HTML
+- [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts): texto da página inicial; a fonte Kolak, local, fica nos títulos
+- [GitHub Pages](https://pages.github.com/): hospedagem da [versão web](https://briandevbr.github.io/OrganizeMe/)
+- Git + GitHub: versionamento, uma branch por esquadrão e Pull Requests revisados
+- [VS Code](https://code.visualstudio.com/) com [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) e [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): ambiente padrão do time (configuração no [guia de boas-vindas](https://briandevbr.github.io/OrganizeMe/welcome.html))
+- [Node.js](https://nodejs.org/) (planejado: servidor do back-end e gravação dos dados em JSON)
 
 ---
 
 ## 🚀 Como rodar
 
-Pré-requisito: [VS Code](https://code.visualstudio.com/) com a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). O back-end ainda não tem servidor configurado, então por enquanto só dá para visualizar o front:
+**Só quer ver?** Abra a [versão web](https://briandevbr.github.io/OrganizeMe/), publicada a partir da `main`. Não precisa instalar nada.
+
+**Quer rodar e mexer no código?** Pré-requisitos: [Git](https://git-scm.com/downloads) e [VS Code](https://code.visualstudio.com/) com a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). Se nunca clonou um repositório, assista antes ao [tutorial de git clone do Davi Perrelli](https://youtu.be/VDhH5xvdti0).
 
 ```bash
 git clone https://github.com/briandevbr/OrganizeMe.git
@@ -205,7 +289,7 @@ cd OrganizeMe
 code .
 ```
 
-No VS Code, clique com o botão direito em `front/HTML/index.html` e escolha **"Open with Live Server"**. Abre a página inicial com os 3 planos; os botões Registrar e Login levam às telas de cadastro e login. O dashboard ainda não tem link a partir das outras telas — abra `front/HTML/dashboard.html` direto pelo Live Server. Os ícones e a fonte Inter vêm de CDN, então é preciso estar conectado à internet.
+No VS Code, clique com o botão direito em `index.html` (na raiz do projeto) e escolha **"Open with Live Server"**. O navegador abre `http://127.0.0.1:5500/index.html` com a página inicial e os 3 planos; os botões Registrar e Login levam às telas de cadastro e login. O dashboard ainda não tem link a partir das outras telas: abra `front/HTML/dashboard.html` direto pelo Live Server. Ícones e a fonte Inter vêm de CDN, então é preciso estar conectado à internet.
 
 Para testar a validação do cadastro no terminal (opcional, precisa de [Node.js](https://nodejs.org/) 22.7+):
 
@@ -218,17 +302,21 @@ node --input-type=module -e 'import { login } from "./back/codigoFonte/cadastro.
 
 ## ✨ Funcionalidades
 
-**Progresso: 6 de 14 etapas concluídas**
+**Progresso: 9 de 18 etapas concluídas**
 
-- [x] Página inicial com chamada do produto, botões Ajuda/Registrar/Login e 3 planos (Free, Intermediário R$ 19,99/mês e Avançado R$ 29,99/mês) com animação de entrada
+- [x] Página inicial com chamada do produto, cards animados e 3 planos (Free, Intermediário R$ 19,99/mês e Avançado R$ 29,99/mês) com animação de entrada que respeita `prefers-reduced-motion`
 - [x] Tela de cadastro com mostrar/ocultar senha nos campos "Senha" e "Confirmar Senha"
-- [x] Tela de login com e-mail, senha e link para o cadastro
-- [x] Validação do cadastro em JS: formato de e-mail, senha com 8+ caracteres, caractere especial, letra maiúscula e sem espaços, nome de usuário sem espaço
-- [x] Layout do dashboard (v0.1-alpha): barra com perfil, botões Add/Remove Item, campo de tags e área de produtos
+- [x] Indicadores visuais das regras de senha no cadastro: 8 caracteres, caractere especial, letra maiúscula e número
+- [x] Tela de login com mostrar/ocultar senha, link "Esqueci minha senha" e atalho para o cadastro
+- [x] Módulo de validação do cadastro (`cadastro.js`): formato de e-mail, senha com 8+ caracteres, caractere especial, letra maiúscula e sem espaços, usuário sem espaço
+- [x] Layout do dashboard (v0.1-alpha): barra com perfil, botões add/remove, campo de tags e área de produtos
 - [x] Inventário de exemplo com 15 produtos em JSON
-- [ ] Ligar `cadastro.js` ao formulário de cadastro
-- [ ] Mostrar/ocultar senha na tela de login
+- [x] Versão web publicada no GitHub Pages
+- [x] Guia de boas-vindas (`welcome.html`) para quem chega no time
+- [ ] Confirmação de senha no cadastro (em andamento na branch `Front-End`)
+- [ ] Unificar as regras de senha de `cad.js` e `cadastro.js` e ligar a validação ao formulário
 - [ ] Autenticação: login levando ao dashboard, com atalho de perfil e redirecionamento conforme o usuário estar logado
+- [ ] Fluxo de "Esqueci minha senha" (hoje só existe o link)
 - [ ] Servidor Node.js gravando os usuários em `dadosPessoais.json`
 - [ ] Dashboard funcional: adicionar e remover itens do inventário, registrando entrada/saída e responsável (RN01, RN02, RN04, RN05)
 - [ ] Alerta de estoque mínimo e marcação "Sem estoque" (RN03, RN06)
@@ -239,16 +327,43 @@ node --input-type=module -e 'import { login } from "./back/codigoFonte/cadastro.
 
 ## 🤝 Contribuindo
 
-Este é um projeto acadêmico em grupo. Contribuições da equipe seguem o fluxo padrão de Pull Request: crie uma branch, faça as alterações e abra um PR para revisão antes do merge em `main`. Sugestões de fora da equipe são bem-vindas via [issues](https://github.com/briandevbr/OrganizeMe/issues).
+O OrganizeMe é de todo o grupo, e todo mundo contribui pelo mesmo fluxo. Antes do primeiro commit, passe pelo [guia de boas-vindas](https://briandevbr.github.io/OrganizeMe/welcome.html): ele explica cada comando com botão de copiar.
+
+**Branches**
+
+| Branch | Quem usa | Para quê |
+|---|---|---|
+| `main` | Liderança | Versão oficial, publicada no GitHub Pages. Ninguém faz push direto: tudo entra por Pull Request revisado |
+| `Front-End` | Esquadrão Front-end | Telas, estilos e interações no navegador |
+| `backEnd` | Esquadrão Back-end | Lógica, dados e regras de negócio |
+
+**Passo a passo**
+
+1. Entre na branch do seu esquadrão e puxe as novidades: `git checkout Front-End` (ou `backEnd`) e `git pull`.
+2. Code em commits pequenos, um assunto por vez.
+3. Rode `git pull` de novo e envie com `git push` para a branch do esquadrão.
+4. A liderança abre o Pull Request para a `main` e revisa antes do merge.
+
+**Commits** seguem o padrão [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/): `tipo(escopo): descrição`, com verbo no presente, em minúsculas e sem ponto final. Tipos usados pelo time: `feat`, `fix`, `docs`, `style`, `refactor` e `chore`. Exemplos reais do histórico:
+
+```text
+feat(cadastro): adiciona indicadores visuais para validação de senha
+refactor(senha): renomeia elementos de erro para nomes semanticos
+docs(senha): adiciona comentarios explicativos nas regras de validacao
+chore: adiciona .gitignore e remove .DS_Store do versionamento
+```
+
+Sugestões de fora do time são bem-vindas via [issues](https://github.com/briandevbr/OrganizeMe/issues).
 
 ---
 
 ## 📄 Licença
 
-Licença não especificada.
+Distribuído sob a licença [MIT](./LICENSE): use, estude e adapte à vontade, mantendo o aviso de copyright. As fontes de terceiros incluídas no repositório (Kolak e Golos Text) seguem as licenças dos seus próprios autores.
 
 ---
 
 <div align="center">
-  <sub>Feito por <a href="https://github.com/briandevbr">David Brian</a> e equipe · projeto acadêmico do 2º período de ADS</sub>
+  <sub>Feito pelo time OrganizeMe 💙 · 2º período de ADS · UNINASSAU Olinda</sub><br/>
+  <sub>Design → Brainstorming → Front-end → Back-end</sub>
 </div>
