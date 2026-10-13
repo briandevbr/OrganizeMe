@@ -1,0 +1,10 @@
+# SO
+.DS_Store
+Thumbs.db
+
+# Node (quando o back começar a rodar de verdade)
+node_modules/
+.env
+
+# Editor
+.vscode/

@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Kolak';
+  src: url('../fonts/kolak.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.regis {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px;
+}
+
+.regis h1 {
+  font-family: 'Kolak', sans-serif;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  text-align: center;
+}
+
+.usuario, .email, .password {
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Container que segura o ícone e o input juntos meio que colocando um lugar para todos ficarem*/
+.grupo-input {
+  position: relative; /* Garante que os ícones se posicionem dentro deste bloco */
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Ícone do lado esquerdo do input */
+.grupo-input .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 16px;
+  pointer-events: none; /* Permite clicar no input através do ícone */
+  z-index: 2;
+}
+
+/* Estilo do campo de texto */
+.boxtext {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-radius: 40px;
+  padding-left: 45px; /* Espaço para o ícone não cobrir o texto digitação */
+  padding-right: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Botão de Cadastrar */
+.botaocad { 
+  width: 100%;
+  height: 55px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #7BD1CA;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.botaocad:hover {
+  background-color: #62beb7;
+}
+
+/* Link para login */
+.voltarlogin {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.voltaloglink {
+  font-family: 'Kolak', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Botão de mostrar/ocultar senha */
+.showsenha {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#show-password {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #444;
+}
+
+.btn-show-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  z-index: 5;
+}
+
+.msg-erro {
+  display: inline-block;
+  font-size: 12px;
+  color: #919191;
+  background-color: #3A3A3A;
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 10px;
+}
+.ativo{ /* Classe para indicar que a regra da senha foi atendida */
+  display: inline-block;
+  background-color: #342929;
+  font-size: 12px;
+  color: #00FF00;
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: underline
+}

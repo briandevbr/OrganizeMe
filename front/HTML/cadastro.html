@@ -1,27 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro</title>
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <from action="cadastro.html" method="post">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
+    <div class="regis">
+        <h1>CRIAR CONTA</h1>  
+        
+        <div class="formulario">
+            <!-- Tag form corrigida (sem a tag vazia extra) -->
+            <form action="cadastro.html" method="post" id="formulario">
+                
+                <div class="usuario">
+                    <label for="nome">Nome Completo:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-regular fa-user"></i></div>
+                        <input class="boxtext" type="text" id="nome" name="nome" required>
+                    </div>
+                </div>  
+                   
+                <div class="email">
+                    <label for="email">Email:</label> <br>
+                    <!-- Div grupo-input agora envolve corretamente o ícone e o input -->
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <input class="boxtext" type="email" id="email" name="email" required>
+                    </div>
+                </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+                <div class="password">
+                    <label for="password">Senha:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
+                        <input class="boxtext" type="password" id="password"  name="password" required>
+                        <button type="button" id="showpassword" class="btn-show-password"><i class="fa-regular fa-eye" id="icon"></i></button>
+                    </div>
+                    <ul class="regras-senha">
+                            <li class="msg-erro" id="erro1">8 Caracteres</li>
+                            <li class="msg-erro" id="erro2">Caractere especial</li>
+                            <li class="msg-erro" id="erro3">Letra maiúscula</li>
+                            <li class="msg-erro" id="erro4">Número</li>
+                        </ul>
+                </div>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-
-        <input type="submit" value="Cadastrar">
-    </from>
+                <div class="password">
+                    <label for="confirm-password">Confirmar Senha:</label> <br>
+                    <div class="grupo-input">
+                        <div class="input-icon"><i class="fa-regular fa-circle-check"></i></div>
+                        <input class="boxtext" type="password" id="confirm-password" name="confirm-password" required>
+                        <button type="button" id="showconfirm-password" class="btn-show-password"><i class="fa-regular fa-eye" id="icon-confi"></i></button>
+                    </div>
+                </div>
+        </div>
+        <input class="botaocad" type="submit" value="Cadastrar Empresa" id="botaocad">
+            <div class="voltarlogin">
+                <p>Já possui conta? <a href="login.html" class="voltaloglink">Entrar</a></p>
+            </div>
+    </div>
+    </form>
+    <script src="../../back/codigoFonte/cad.js"></script>
+    
 </body>
 </html>
