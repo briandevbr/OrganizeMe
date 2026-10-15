@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+    color: #182238;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+}
+
+.logo {
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #5b5fef;
+    font-size: 23px;
+    font-weight: bold;
+}
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #475569;
+    text-decoration: none;
+}
+
+.btn-login,
+.btn-primary {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #5b5fef;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 100px 8%;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tag {
+    color: #5b5fef;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #5b5fef;
+}
+
+.hero-content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.hero-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #18223812;
+    min-width: 280px;
+}
+
+.hero-card h2 {
+    margin-bottom: 22px;
+}
+
+.hero-card p {
+    padding: 12px 0;
+    color: #475569;
+}
+
+.recursos {
+    padding: 70px 8%;
+    text-align: center;
+    background: white;
+}
+
+.recursos > p {
+    color: #64748b;
+    margin: 15px 0 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    padding: 30px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.card p {
+    margin-top: 12px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 60px 7%;
+    }
+
+    .hero-card {
+        min-width: 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
