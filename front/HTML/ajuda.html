@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Central de Ajuda |</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/ajuda.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="logo"></a>
+    </header>
+
+    <main class="central-ajuda">
+
+        <section class="introducao">
+            <h1>Como podemos ajudar?</h1>
+
+            <div class="pesquisa">
+                <input
+                    type="search"
+                    id="pesquisa"
+                    placeholder="Pesquise sua dúvida..."
+                    aria-label="Pesquisar dúvidas"
+                >
+                <button type="button" id="btn-pesquisa" aria-label="Pesquisar">
+                    Buscar
+                </button>
+            </div>
+        </section>
+
+        <section class="conteudo-ajuda">
+
+            <div class="duvidas">
+                <h2>Dúvidas? Podemos ajudar!</h2>
+
+                <details>
+                    <summary>Como usar o site?</summary>
+                    <p>Faça login na sua conta e utilize o painel para cadastrar e organizar seus produtos.</p>
+                </details>
+
+                <details>
+                    <summary>Como criar conta?</summary>
+                    <p>Acesse a página de registro, preencha seus dados e siga as instruções para criar sua conta.</p>
+                </details>
+
+                <details>
+                    <summary>Como entrar em contato?</summary>
+                    <p>Utilize o formulário de contato abaixo para descrever sua dúvida ou problema.</p>
+                </details>
+
+                <details>
+                    <summary>Métodos de pagamento?</summary>
+                    <p>Consulte as opções disponíveis na área de planos do OrganizeMe.</p>
+                </details>
+
+                <details>
+                    <summary>Qual é a idade apropriada?</summary>
+                    <p>Consulte os termos de uso do serviço para conhecer as condições de utilização.</p>
+                </details>
+            </div>
+
+            <div class="atalhos">
+
+                <a href="#contato" class="cartao-ajuda">
+                    <span class="icone">⚙</span>
+                    <span>Configuração de Conta</span>
+                </a>
+
+                <a href="index.html#planos" class="cartao-ajuda">
+                    <span class="icone">▤</span>
+                    <span>Pagamentos</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="contato" id="contato">
+            <h2>Contate nosso time de suporte</h2>
+            <p>Envie sua dúvida para que nossa equipe possa ajudar.</p>
+
+            <form id="form-contato">
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="mensagem">Digite seu problema:</label>
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Descreva seu problema..."
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+                <p id="retorno" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="../../back/codigoFonte/ajuda.js"></script>
+
+</body>
+</html>
