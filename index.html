@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrganizeMe</title>
+    <title>OrganizeMe | Sua rotina organizada</title>
     <link rel="shortcut icon" href="Icone.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,84 +11,94 @@
     <link rel="stylesheet" href="front/CSS/estilo.css">
 </head>
 <body>
-    <div class ="container-titulo">
-        <p class="subtitulo">Um jeito simples de se organizar</p>
-        <h2 class="titulo">Organize seus produtos automaticamente<br>de forma simples e fácil</h2>
-        <p class="descricao">Com a OrganizeMe você pode organizar seus produtos de forma rápida e eficiente.</p>
-    </div>
-     <!-- Cartas rotativas(teste, talvez remova) -->
-    <div class="stack">
-        <div class="card c1">Organização</div>
-        <div class="card c2">Produtos</div>
-        <div class="card c3">Fácil</div>
-    </div>
+    <header class="navbar">
+       
+        <a href="#" class="logo">
+             <img src="../../Icone.ico" alt="Logo" class="logo-img">
+            <h1>OrganizeMe</h1>
+        </a>
 
-    <div class ="area-planos">
-            <div class="container-titulo-planos">
-                <h2>Escolha o plano ideal para você</h2>
-                <p>Transforme seus resultados com a opção que melhor se adapta às suas  necessidades.</p>
-            </div>
+         <nav>
+            <a href="#area-planos">Planos</a>
+            <a href="#sobre">sobre</a>
+            <a href="#ajuda">Ajuda</a>
+        </nav>
+
+         <a href="front/HTML/login.html" class="btn-login">Entrar</a>
+         
             
-        <div class = "container-planos"> <!--Caixa onde esta os planos-->
-            <div class = "plano01 plano-card">
-                <h3 class="titulo-plano">Plano Free</h3>
-                <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
-                <p class="preco">Gratuito</p>
-                <ul class="card-lista">
-                    <li>Cadastro de até 25 produtos</li>
-                    <li>Apenas um usuario para adiministrar</li>
-                    <li>Suporte por e-mail</li>
-                    <li>Com Anuncios</li>
-                </ul>
-                <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Começar Grátis</button></a>  <!--Botão para o plano free-->
-            </div>
-            <div class="plano02 plano-card">
-                <h3 class="titulo-plano">Plano Intermediário</h3>
-                <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
-                <p class="preco">R$ 19,99/mês</p>
-                <ul class="card-lista">
-                    <li>Cadastro de até 150 produtos</li>
-                    <li>Até 4 usuarios para adiministrar</li>
-                    <li>Relatórios avançados de estoque</li>
-                    <li>Suporte por chat e e-mail</li>
-                    <li>Sem Anuncios</li>
-                </ul>
-                <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
-            </div>
-            <div class="plano03 plano-card">
-                <h3 class="titulo-plano">Plano Avançado</h3>
-                <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
-                <p class="preco">R$ 29,99/mês</p>
-                <ul class="card-lista">
-                    <li>Cadastro ilimitado de produtos</li>
-                    <li>Usuarios ilimitados para adiministrar</li>
-                    <li>Relatórios detalhados de estoque</li>
-                    <li>Suporte prioritário por chat e e-mail</li>
-                    <li>Sem Anuncios</li>
-                </ul>
-                   <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para plano Avançado-->
-            </div>
-        </div>       
-    </div>
+   </header>
+    <main>
+     <section class="titulo" id="home">
+        
+             <div class ="container-titulo">
+                    <p class="subtitulo">Um jeito simples de se organizar</p>
+                    <h2 class="tag">Organize seus produtos automaticamente<br>de forma simples e fácil</h2>
+                    <p class="descricao">Com a OrganizeMe você pode organizar seus produtos de forma rápida e eficiente.</p>
+                </div>
+                 <!-- Cartas rotativas(teste, talvez remova) -->
+                <div class="stack">
+                    <div class="card c1">Organização</div>
+                    <div class="card c2">Produtos</div>
+                    <div class="card c3">Fácil</div>
+                </div>
+        
+        
+    </section>
 
-   <div class="botoes">
-    <h1>OrganizeMe</h1>
+    <section class="planos" id="planos">
+        <div class="area-planos"id="area-planos"> <!--Área onde esta os planos-->
 
-    <div class="botoes-direita">
-        <div class="ajuda">
-            <a href="#ajuda">
-            <button type="button">Ajuda</button></a>
+                 <div class="container-titulo-planos">
+                        <h2>Escolha o plano ideal para você</h2>
+                        <p>Transforme seus resultados com a opção que melhor se adapta às suas  necessidades.</p>
+                    </div>
+               
+        
+            <div class = "container-planos"> <!--Caixa onde esta os planos-->
+                <div class = "plano01 plano-card">
+                    <h3 class="titulo-plano">Plano Free</h3>
+                    <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
+                    <p class="preco">Gratuito</p>
+                    <ul class="card-lista">
+                        <li>Cadastro de até 25 produtos</li>
+                        <li>Apenas um usuario para adiministrar</li>
+                        <li>Suporte por e-mail</li>
+                        <li>Com Anuncios</li>
+                    </ul>
+                    <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Começar Grátis</button></a>  <!--Botão para o plano free-->
+                </div>
+                <div class="plano02 plano-card">
+                    <h3 class="titulo-plano">Plano Intermediário</h3>
+                    <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
+                    <p class="preco">R$ 19,99/mês</p>
+                    <ul class="card-lista">
+                        <li>Cadastro de até 150 produtos</li>
+                        <li>Até 4 usuarios para adiministrar</li>
+                        <li>Relatórios avançados de estoque</li>
+                        <li>Suporte por chat e e-mail</li>
+                        <li>Sem Anuncios</li>
+                    </ul>
+                    <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
+                </div>
+                <div class="plano03 plano-card">
+                    <h3 class="titulo-plano">Plano Avançado</h3>
+                    <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
+                    <p class="preco">R$ 29,99/mês</p>
+                    <ul class="card-lista">
+                        <li>Cadastro ilimitado de produtos</li>
+                        <li>Usuarios ilimitados para adiministrar</li>
+                        <li>Relatórios detalhados de estoque</li>
+                        <li>Suporte prioritário por chat e e-mail</li>
+                        <li>Sem Anuncios</li>
+                    </ul>
+                       <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para plano Avançado-->
+                </div>
+            </div>
         </div>
-        <div class="cadastro">
-            <a href="front/HTML/cadastro.html">
-            <button type="button">Registrar</button></a>
-        </div>
-        <div class="login">
-            <a href="front/HTML/login.html">
-            <button type="button">Login</button></a>
-        </div>
-    </div>
-   </div>
+    </section>
+ </main>''
+   
     <!--Animação planos-->
     <script>
         const cards = document.querySelectorAll('.plano-card');
