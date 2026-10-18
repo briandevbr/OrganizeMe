@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--cor-principal: #21877d;
+--cor-principal-hover: #176b63;
+--cor-fundo: #f4f9f8;
+--cor-texto: #172b2a;
+--cor-texto-secundario: #647775;
+--cor-borda: #e0ecea;
+--sombra: 0 8px 28px rgba(31, 93, 85, 0.07);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: #0f172a;
+    background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    width: 100%;
+    padding: 20px 6%;
+    background: linear-gradient(
+        270deg,
+        rgb(161, 243, 206) 2%,
+        rgba(240, 255, 252, 1) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    text-decoration: none;
+}
+
+/* Conteúdo principal */
+
+.central-ajuda {
+width: min(1100px, 92%);
+margin: 55px auto;
+}
+
+.introducao {
+text-align: center;
+margin-bottom: 42px;
+}
+
+.introducao h1 {
+font-size: clamp(28px, 4vw, 40px);
+line-height: 1.2;
+letter-spacing: -1.2px;
+margin-bottom: 25px;
+}
+
+/* Pesquisa */
+
+.pesquisa {
+display: flex;
+max-width: 660px;
+margin: 0 auto;
+padding: 7px;
+background: #ffffff;
+border: 1px solid #d7e8e5;
+border-radius: 14px;
+box-shadow: 0 8px 25px rgba(31, 93, 85, 0.08);
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pesquisa:focus-within {
+border-color: var(--cor-principal);
+box-shadow: 0 0 0 4px rgba(33, 135, 125, 0.10);
+}
+
+.pesquisa input {
+flex: 1;
+min-width: 0;
+padding: 14px;
+border: none;
+outline: none;
+background: transparent;
+color: var(--cor-texto);
+font: inherit;
+}
+
+.pesquisa input::placeholder {
+color: #91a19f;
+}
+
+/* Botões */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    background-color: #7BD1CA;
+    color: #0f172a;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(123, 209, 202, 0.35);
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+    box-shadow: 0 0 18px rgba(123, 209, 202, 0.6);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Dúvidas e atalhos */
+
+.conteudo-ajuda {
+display: grid;
+grid-template-columns: 1.15fr 0.85fr;
+gap: 28px;
+align-items: start;
+}
+
+.duvidas,
+.contato {
+padding: 30px;
+background: rgba(255, 255, 255, 0.96);
+border: 1px solid var(--cor-borda);
+border-radius: 18px;
+box-shadow: var(--sombra);
+}
+
+.duvidas h2,
+.contato h2 {
+margin-bottom: 22px;
+font-size: 21px;
+line-height: 1.4;
+letter-spacing: -0.4px;
+}
+
+/* Perguntas frequentes */
+
+details {
+margin-bottom: 12px;
+border: 1px solid var(--cor-borda);
+border-radius: 11px;
+background: #ffffff;
+overflow: hidden;
+transition: border-color 0.2s, background 0.2s;
+}
+
+details:hover {
+border-color: #b8dcd6;
+}
+
+details[open] {
+border-color: #b8dcd6;
+background: #fbfefd;
+}
+
+summary {
+padding: 17px;
+color: var(--cor-texto);
+font-size: 14px;
+font-weight: 600;
+line-height: 1.5;
+cursor: pointer;
+}
+
+summary::marker {
+color: var(--cor-principal);
+}
+
+details p {
+padding: 0 17px 18px;
+color: var(--cor-texto-secundario);
+font-size: 14px;
+line-height: 1.7;
+}
+
+/* Cartões de ajuda */
+
+.atalhos {
+display: flex;
+flex-direction: column;
+gap: 18px;
+}
+
+.cartao-ajuda {
+display: flex;
+align-items: center;
+gap: 18px;
+min-height: 135px;
+padding: 25px;
+color: var(--cor-texto);
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+line-height: 1.5;
+background: #ffffff;
+border: 1px solid var(--cor-borda);
+border-radius: 18px;
+box-shadow: var(--sombra);
+transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.cartao-ajuda:hover {
+transform: translateY(-3px);
+border-color: #b8dcd6;
+box-shadow: 0 14px 32px rgba(31, 93, 85, 0.11);
+}
+
+.icone {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 56px;
+height: 56px;
+border-radius: 15px;
+background: #e5f6f2;
+color: var(--cor-principal);
+font-size: 27px;
+}
+
+/* Contato com suporte */
+
+.contato {
+margin-top: 30px;
+}
+
+.contato > p {
+margin-bottom: 24px;
+color: var(--cor-texto-secundario);
+font-size: 14px;
+line-height: 1.7;
+}
+
+#form-contato {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+#form-contato label {
+margin-top: 9px;
+font-size: 14px;
+font-weight: 600;
+}
+
+#form-contato input,
+#form-contato textarea {
+width: 100%;
+padding: 14px 15px;
+border: 1px solid #d7e5e2;
+border-radius: 10px;
+background: #fcfefd;
+color: var(--cor-texto);
+font: inherit;
+font-size: 14px;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#form-contato input::placeholder,
+#form-contato textarea::placeholder {
+color: #91a19f;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+outline: none;
+border-color: var(--cor-principal);
+box-shadow: 0 0 0 3px rgba(33, 135, 125, 0.10);
+background: #ffffff;
+}
+
+#form-contato textarea {
+min-height: 130px;
+resize: vertical;
+line-height: 1.6;
+}
+
+#form-contato button {
+align-self: flex-start;
+margin-top: 12px;
+}
+
+#retorno {
+color: var(--cor-texto-secundario);
+font-size: 14px;
+line-height: 1.5;
+}
+
+/* Telas menores */
+
+@media (max-width: 700px) {
+.cabecalho {
+padding: 18px 5%;
+}
+
+.central-ajuda {
+    width: 92%;
+    margin: 35px auto;
+}
+
+.introducao {
+    margin-bottom: 30px;
+}
+
+.introducao h1 {
+    letter-spacing: -0.6px;
+}
+
+.conteudo-ajuda {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.duvidas,
+.contato {
+    padding: 21px;
+    border-radius: 15px;
+}
+
+.cartao-ajuda {
+    min-height: 100px;
+    padding: 20px;
+}
+
+.pesquisa button {
+    padding: 12px 16px;
+}
+
+#form-contato button {
+    width: 100%;
+}
+
+}
+
+@media (max-width: 380px) {
+.pesquisa {
+padding: 5px;
+}
+
+.pesquisa input {
+    padding: 10px 8px;
+    font-size: 13px;
+}
+
+.pesquisa button {
+    padding: 11px;
+    font-size: 13px;
+}
+
+}

@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: 'Kolak';
@@ -6,13 +15,56 @@
   font-style: normal;
 }
 
+
 body {
-    height: 100vh;
-    width: 100vw;
-    background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
-    background-size: 300% 300%;
-    animation: gradientMove 8s ease infinite;
+   font-family: Arial, sans-serif;
+     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
+    color: #182238;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+}
+
+.logo{
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #5b5fef;
+    font-size: 23px;
+    font-weight: bold;
+    
+}
+.logo-img {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+}
+
+
+nav {
+
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: #475569;
+    text-decoration: none;
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #5b5fef;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
 .container-titulo {
     display: flex;
     flex-direction: column;
@@ -41,7 +93,7 @@ h1 {
     font-size: 24px;
 }
 
-.titulo {
+.tag {
     margin-top: 5;
     margin-bottom: 12px;
     font-family: "Inter", sans-serif;
@@ -70,26 +122,9 @@ h1 {
         background-position: 0% 50%;
     }
 }
-.botoes {
-    display: flex;
-    align-items: center;       
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding: 12px 25px;
-    box-sizing: border-box;
-    background: #c1f5de;
-    background: linear-gradient(270deg, rgb(161, 243, 206) 2%, rgba(240, 255, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
-}
 
-.botoes-direita {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-}
+
+
 
 .login {
     display: flex;
@@ -170,8 +205,8 @@ h1 {
     font-weight: bold;
     font-size: 25px;
 }
-.plano01{
-    background-color: #ffffff;
+.plano01, .plano02, .plano03 {
+     background-color: #ffffff;
     width: 400px;
     height:550px;
     padding: 5px;
@@ -181,33 +216,13 @@ h1 {
     justify-content: space-between;
     box-shadow: 0 0 15px #7BD1CA;
 }
-.plano02{
-    background-color: #ffffff;
-    width: 400px;
-    height:550px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    justify-content: space-between;
-    box-shadow: 0 0 15px #7BD1CA;
-}
-.plano03{
-    background-color: #ffffff;
-    width: 400px;
-    height:550px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    justify-content: space-between;
-    box-shadow: 0 0 15px #7BD1CA;
-}
+
 .plano-card {
     opacity: 0;
     transform: rotateY(90deg);
     transform-origin: center;
     transition: opacity 0.7s ease, transform 0.7s ease;
+    
 }
 
 .plano-card.visivel {
