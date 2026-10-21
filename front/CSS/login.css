@@ -159,5 +159,19 @@ a {
   color: #666;
   z-index: 5;
 }
+.botao-voltar {
+    display: inline-flex;
+    gap: 6px;                 
+    text-decoration: none;    
+    color: #625656;           
+    font-family: inherit;      
+    font-size: 16px;
+    font-weight: 500; 
+    position: absolute;
+    transform: translateY(-10px)translateX(-80px);     
+}
 
+.botao-voltar:hover {
+    color: #121212;           
+}
 
