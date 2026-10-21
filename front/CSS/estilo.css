@@ -198,6 +198,8 @@ h1 {
     display: flex;
     margin-top: 120px; /*Distancia das caixas dos planos*/
     perspective: 1200px;
+    position: relative;
+    margin-bottom: 100px; /*Distancia do rodapé*/
 }
 .container-planos li::before {
     content: "✓";         
@@ -335,4 +337,37 @@ h1 {
 .stack:hover .c3 {
     transform: translate(90px, -30px) rotate(18deg);
     box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
+}
+.rodape {
+    background-color: #285D57; /* Cor de fundo do rodapé */
+    padding: 30px 20px;
+    margin-top: 150px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+/* Agrupamento dos links */
+.rodape .rodape-links {
+    margin-bottom: 30px; 
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.rodape .rodape-links a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.logo-img-footer {
+    opacity: 0.3; 
+    position: absolute;
+    width: 100px;
+    transform: translateY(-65px) translateX(-740px);
 }
