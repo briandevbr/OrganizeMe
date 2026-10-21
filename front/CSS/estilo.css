@@ -55,14 +55,27 @@ nav a {
     color: #475569;
     text-decoration: none;
 }
-
+.btn-nav{
+    gap: 20px;
+    display: flex;
+}
 .btn-login {
     display: inline-block;
     padding: 12px 20px;
-    background: #5b5fef;
-    color: white;
-    border-radius: 8px;
+    color: #0f172a;
+    border-radius: 4px;
     text-decoration: none;
+        border: 2px solid #0f172a;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.btn-cadastro{
+      display: inline-block;
+    padding: 12px 20px;
+    background: #7BD1CA;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;  
 }
 
 .container-titulo {
