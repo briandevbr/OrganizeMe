@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="layout">
+
+  <!-- Tela: Histórico -->
+  <section class="screen">
+    <header>
+      <button type="button" class="back" aria-label="Voltar">&#8592;</button>
+      <h1>Histórico</h1>
+    </header>
+
+    <input class="search" type="search" placeholder="Buscar pagamentos" aria-label="Buscar pagamentos">
+
+    <div class="chips">
+      <button type="button" class="chip ativo">Todos</button>
+      <button type="button" class="chip">Pagos</button>
+      <button type="button" class="chip">Falhos</button>
+      <button type="button" class="chip">Pendentes</button>
+    </div>
+
+    <ul class="list">
+      <li class="item pago">
+        <small>12/10/2026</small><b>R$ 40,00</b>
+        <span>Fornecedor Alfa<br><small>Pix</small></span><i>Pago</i>
+      </li>
+      <li class="item pendente">
+        <small>10/10/2026</small><b>R$ 80,00</b>
+        <span>Licença de software<br><small>Cartão de crédito</small></span><i>Pendente</i>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Tela: Pagamentos -->
+  <section class="screen">
+    <header>
+      <button type="button" class="back" aria-label="Voltar">&#8592;</button>
+      <h1>Pagamentos</h1>
+    </header>
+
+    <h2>Resumo financeiro</h2>
+    <div class="summary">
+      <button type="button" class="tile">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+        <span>Pagamentos concluídos</span><strong>1</strong>
+      </button>
+      <button type="button" class="tile">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span>Pendências</span><strong>1</strong>
+      </button>
+      <button type="button" class="tile">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.500-1.500-2.500-1.500-1.500 0-2.500.8-2.500 2 0 3 5 1.500 5 4.500 0 1.200-1 2-2.500 2-1.100 0-2-.5-2.500-1.500M12 6.500v11"/></svg>
+        <span>Total</span><strong>R$ 4.000,00</strong>
+      </button>
+      <button type="button" class="tile">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.500-2 1.500-2-1.500-2 1.500-2-1.500L6 21z"/><path d="M9 8h6M9 12h6"/></svg>
+        <span>Comprovantes</span><strong>1</strong>
+      </button>
+    </div>
+
+    <button type="button" class="full">Histórico completo</button>
+
+    <h2>Métodos de pagamento</h2>
+    <ul class="methods">
+      <li><button type="button" class="method">
+        <svg class="ico" viewBox="0 0 24 24"><path d="m12 3 4 4-4 4-4-4zM12 13l4 4-4 4-4-4z"/></svg>Pix</button></li>
+      <li><button type="button" class="method">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>Cartão</button></li>
+      <li><button type="button" class="method">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M5 6v12M9 6v12M12 6v12M16 6v12M19 6v12"/></svg>Boleto</button></li>
+      <li><button type="button" class="method">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M11 17h2"/></svg>Cartão digital</button></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
