@@ -1,0 +1,59 @@
+:root {
+  --bg: #f4f5f7; --surface: #fff; --ink: #1b2430; --muted: #667085; --line: #e3e6eb;
+  --accent: #0f766e; --pago: #0f766e; --pendente: #b45309; --falho: #b91c1c;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #11151b; --surface: #1a2029; --ink: #eef1f5; --muted: #98a2b3; --line: #2a323e;
+          --accent: #2dd4bf; --pago: #2dd4bf; --pendente: #fbbf24; --falho: #f87171; }
+}
+
+* { box-sizing: border-box; margin: 0; }
+body { font-family: "IBM Plex Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+button { font: inherit; color: inherit; text-align: left; cursor: default; }
+ul { list-style: none; padding: 0; }
+
+/* As duas telas lado a lado, como no wireframe */
+.layout { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; padding: 24px 16px; }
+.screen { width: 100%; max-width: 380px; padding: 20px 18px 28px; background: var(--bg); border: 1px solid var(--line); border-radius: 20px; }
+
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+h1 { font-size: 1.25rem; font-weight: 600; }
+h2 { font-size: .95rem; font-weight: 600; margin-bottom: 12px; }
+
+/* Superfícies em comum */
+.tile, .method, .item, .search, .back, .chip {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+}
+.ico { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Resumo financeiro */
+.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tile { display: grid; gap: 10px; padding: 14px; border-radius: 12px; }
+.tile span { font-size: .8rem; color: var(--muted); }
+.tile strong { font-size: 1.15rem; }
+
+.full { width: 100%; margin: 12px 0 28px; padding: 12px; text-align: center; font-weight: 500;
+        color: var(--accent); background: none; border: 1px solid var(--accent); border-radius: 10px; }
+
+/* Métodos de pagamento */
+.methods { display: grid; gap: 8px; }
+.method { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; font-weight: 500; }
+.method::after { content: ""; margin-left: auto; width: 8px; height: 8px;
+                 border: solid var(--muted); border-width: 2px 2px 0 0; transform: rotate(45deg); }
+
+/* Histórico */
+.back { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; }
+.search { width: 100%; padding: 12px 14px; font: inherit; color: inherit; }
+
+.chips { display: flex; gap: 8px; margin: 12px 0 16px; overflow-x: auto; }
+.chip { padding: 6px 14px; font-size: .85rem; white-space: nowrap; border-radius: 999px; }
+.chip.ativo { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+
+.list { display: grid; gap: 8px; }
+.item { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px; }
+.item small { color: var(--muted); font-size: .78rem; }
+.item b { text-align: right; }
+.item i { display: flex; align-items: center; justify-content: flex-end; gap: 6px;
+          font-size: .78rem; font-style: normal; }
+.item i::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.pago i { color: var(--pago); } .pendente i { color: var(--pendente); } .falho i { color: var(--falho); }
