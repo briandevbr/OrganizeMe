@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="front/CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="navbar">
@@ -57,21 +58,28 @@
         
             <div class = "container-planos"> <!--Caixa onde esta os planos-->
                 <div class = "plano01 plano-card">
-                    <h3 class="titulo-plano">Plano Free</h3>
-                    <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
-                    <p class="preco">Gratuito</p>
+                    <div class="base-planos">
+                        <h3 class="titulo-plano">Inicial</h3>
+                        <p class="valores1"> <span class="preco">Gratuito</span></p>
+                        <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
+                        <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Começar grátis</button></a> <!--Botão para o plano free-->
+                    </div>
+                    <div class="linha-horizontal"></div> 
                     <ul class="card-lista">
                         <li>Cadastro de até 25 produtos</li>
                         <li>Apenas um usuario para adiministrar</li>
                         <li>Suporte por e-mail</li>
-                        <li>Com Anuncios</li>
+                        <li class="anuncio">Com Anuncios</li>
                     </ul>
-                    <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Começar Grátis</button></a>  <!--Botão para o plano free-->
                 </div>
                 <div class="plano02 plano-card">
-                    <h3 class="titulo-plano">Plano Intermediário</h3>
-                    <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
-                    <p class="preco">R$ 19,99/mês</p>
+                    <div class="base-planos">
+                        <div class="plano2Recomendado"><h3 class="titulo-plano"> Intermediário</h3><span class="recomendado">RECOMENDADO</span></div> 
+                        <p class="valores"> <span class="preco">R$ 19,99</span class="mes-preco"><span>/mês</span></p>
+                        <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
+                        <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
+                    </div>
+                    <div class="linha-horizontal"></div>
                     <ul class="card-lista">
                         <li>Cadastro de até 150 produtos</li>
                         <li>Até 4 usuarios para adiministrar</li>
@@ -79,12 +87,15 @@
                         <li>Suporte por chat e e-mail</li>
                         <li>Sem Anuncios</li>
                     </ul>
-                    <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
                 </div>
                 <div class="plano03 plano-card">
-                    <h3 class="titulo-plano">Plano Avançado</h3>
-                    <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
-                    <p class="preco">R$ 29,99/mês</p>
+                    <div class="base-planos">
+                    <h3 class="titulo-plano"> Avançado</h3>
+                        <p class="valores"><span class="preco">R$ 29,99</span><span class="mes-preco">/mês</span></p>
+                        <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
+                        <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para plano Avançado-->
+                    </div>
+                    <div class="linha-horizontal"></div>
                     <ul class="card-lista">
                         <li>Cadastro ilimitado de produtos</li>
                         <li>Usuarios ilimitados para adiministrar</li>
@@ -92,7 +103,6 @@
                         <li>Suporte prioritário por chat e e-mail</li>
                         <li>Sem Anuncios</li>
                     </ul>
-                       <a href="front/HTML/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para plano Avançado-->
                 </div>
             </div>
 

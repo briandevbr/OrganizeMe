@@ -18,8 +18,8 @@ html {
 
 body {
    font-family: Arial, sans-serif;
-     background: radial-gradient(circle, #a5e2db, #e1eeee, #feffff);
     color: #182238;
+    background-color: #F5F2EA;
 }
 
 .navbar {
@@ -212,26 +212,49 @@ h1 {
     margin-top: 120px; /*Distancia das caixas dos planos*/
     perspective: 1200px;
     position: relative;
-    margin-bottom: 100px; /*Distancia do rodapé*/
 }
 .container-planos li::before {
-    content: "✓";         
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";        
     color: #10b981;       
     font-weight: bold;
-    font-size: 25px;
+    font-size: 15px;
+    margin-right: 10px;
 }
-.plano01, .plano02, .plano03 {
+.plano01, .plano03 {
      background-color: #ffffff;
     width: 400px;
     height:550px;
     padding: 5px;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    justify-content: space-between;
-    box-shadow: 0 0 15px #7BD1CA;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #121212;
 }
-
+.plano02 {
+    background-color: #0E4F43;
+    width: 400px;
+    height:550px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #121212;
+    color: #F5F2EA;
+    .card-lista li::before{
+        color: #F5F2EA;
+    }
+    .botaop{
+        color: #0E4F43;
+        border: none;
+    }
+}
+.card-lista{
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ margin-left: 20px;
+}
 .plano-card {
     opacity: 0;
     transform: rotateY(90deg);
@@ -264,30 +287,37 @@ h1 {
 }
 /*Botão de escolher o plano*/
 .botaop{ 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 10px;
-    border-radius: 50px;
-    border:0;
-    width: 380px;  
-    cursor: pointer;
-    background-color: #7BD1CA;
-    box-shadow: 0 0 15px #7BD1CA;
-    animation: pulse 1.5s infinite;
-    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    padding: 15px;
+    border-radius: 10px;
+    width: 350px;  
+        display: inline-block;
+    color: #0f172a;
+    text-decoration: none;
+        border: 2px solid #0f172a;
+            cursor: pointer;
+    background-color: #FFFFFF;
+}
+.linha-horizontal {
+    width: 350px;      
+    border-top: 2px solid #d3d0c9; 
+    margin: 10px 0;  
+    transform: translateX(20px);
 }
 .titulo-plano{
     font-size: 25px;
     display: inline-block;
-    background: #dffaf6;
-    color: #0f172a;
-    padding: 10px 22px;
-    border-radius: 999px;
-    border: 2px solid #7BD1CA;
-    box-shadow: 0 0 10px rgba(123, 209, 202, 0.35);
-    margin: 10px auto 0;
-    text-align: center;
-    width: fit-content;
+    margin-top: 15px;
+    display: flex;
+    margin-left: 20px;
+}
+.base-planos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 300px; 
+  margin-bottom: 10px;
 }
 /*Lista do que tem em cada plano*/
 .card-lista{
@@ -296,8 +326,33 @@ h1 {
     text-align: left
 }
 .preco{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+    transform: translateX(-100px);
+
+}
+.mes-preco {
+    font: 20px;
+}
+.valores {
+    transform: translateX(-75px);
+}
+.valores1{
+   transform: translateX(-100px); 
+}
+.plano2Recomendado{
+    display: flex;
+    flex-direction: row;
+    .recomendado{
+        margin-left: 80px;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 800;
+        background-color: #F5F2EA;
+        border-radius: 5px;
+        color: #0E4F43;
+        padding: 5px;
+    }
 }
 /*Animação cartas*/
 .stack {
@@ -352,7 +407,7 @@ h1 {
     box-shadow: 0 20px 30px rgba(15, 23, 42, 0.2);
 }
 .rodape {
-    background-color: #285D57; /* Cor de fundo do rodapé */
+    background-color: #0E4F43; /* Cor de fundo do rodapé */
     padding: 30px 20px;
     margin-top: 150px;
     text-align: center;
