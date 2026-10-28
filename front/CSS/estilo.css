@@ -10,7 +10,7 @@ html {
 
 @font-face {
   font-family: 'Kolak';
-  src: url('../fonts/kolak.ttf') format('truetype'); /* Ajuste a extensão se for .otf ou .woff2 */
+  src: url('../assets/fonts/KOLAK.ttf') format('truetype'); /* Ajuste a extensão se for .otf ou .woff2 */
   font-weight: normal;
   font-style: normal;
 }
@@ -335,10 +335,8 @@ h1 {
     font: 20px;
 }
 .valores {
-    transform: translateX(-75px);
-}
-.valores1{
-   transform: translateX(-100px); 
+ align-self: flex-start;
+ margin-left: 20px;
 }
 .plano2Recomendado{
     display: flex;

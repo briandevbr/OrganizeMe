@@ -1,3 +1,10 @@
+/**
+ * ARQUIVO DE REFERÊNCIA / MODELO DE BASE
+ * -----------------------------------------------------------------
+ * Este arquivo não é executado diretamente. Ele serve apenas como 
+ * base/template para estruturar novas validações no projeto.
+ */
+
 const verificarEmail = (email) => {
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
   return regexEmail.test(email);
