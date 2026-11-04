@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro</title>
     <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="regis">
-        <h1>CRIAR CONTA</h1>  
+        <h1>CRIAR CONTA</h1>
+        <a href="../../index.html" class="botao-voltar"> <!-- botão de voltar para a página inicial -->
+            <i class="fa-solid fa-angles-left"></i> Voltar
+        </a>  
         
         <div class="formulario">
             <!-- Tag form corrigida (sem a tag vazia extra) -->
@@ -66,7 +69,7 @@
             </div>
     </div>
     </form>
-    <script src="../../back/codigoFonte/cad.js"></script>
-    
+    <script src="../js/interactions/cadastro-handlers.js"></script>
+    <script src="../js/utils/validacao-cadastro.js"></script>
 </body>
 </html>
