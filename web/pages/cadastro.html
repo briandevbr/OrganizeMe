@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro</title>
-    <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="shortcut icon" href="../../assets/images/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -13,20 +13,20 @@
         <h1>CRIAR CONTA</h1>
         <a href="../../index.html" class="botao-voltar"> <!-- botão de voltar para a página inicial -->
             <i class="fa-solid fa-angles-left"></i> Voltar
-        </a>  
-        
+        </a>
+
         <div class="formulario">
             <!-- Tag form corrigida (sem a tag vazia extra) -->
             <form action="cadastro.html" method="post" id="formulario">
-                
+
                 <div class="usuario">
                     <label for="nome">Nome Completo:</label> <br>
                     <div class="grupo-input">
                         <div class="input-icon"><i class="fa-regular fa-user"></i></div>
                         <input class="boxtext" type="text" id="nome" name="nome" required>
                     </div>
-                </div>  
-                   
+                </div>
+
                 <div class="email">
                     <label for="email">Email:</label> <br>
                     <!-- Div grupo-input agora envolve corretamente o ícone e o input -->
@@ -69,7 +69,7 @@
             </div>
     </div>
     </form>
-    <script src="../js/interactions/cadastro-handlers.js"></script>
-    <script src="../js/utils/validacao-cadastro.js"></script>
+    <script src="../../src/js/interactions/cadastro-handlers.js"></script>
+    <script src="../../src/js/utils/validacao-cadastro.js"></script>
 </body>
 </html>

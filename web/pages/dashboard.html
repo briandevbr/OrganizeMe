@@ -1,70 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="shortcut icon" href="../../Icone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/icon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="painel">
-        <h1>OrganizeMe</h1>
-        <button class="profile-btn" id="profile-btn">
-        <!--acho svg poluido mas da pro gasto por hora / tambem acho viu-->
-             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>  <circle cx="12" cy="7" r="4"/></svg>
+      <h1>OrganizeMe</h1>
+      <button
+        type="button"
+        class="profile-btn"
+        id="profile-btn"
+        aria-label="Perfil"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-user preview-icon"
+          aria-hidden="true"
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </button>
+    </header>
 
-         </button>
-   </header>
-
-   <nav class="ferramentas">
-        <button class="add" id="add-product">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus preview-icon"><path d="M5 12h14"/><path d="M12 5v14"/></svg>add
-
-        </button>
-        <button  class="remove">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus preview-icon"><path d="M5 12h14"/></svg> remove
-        </button>
+    <nav class="ferramentas" aria-label="Ferramentas do inventário">
+      <button type="button" class="add" id="add-product">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-plus preview-icon"
+          aria-hidden="true"
+        >
+          <path d="M5 12h14" />
+          <path d="M12 5v14" />
+        </svg>
+        add
+      </button>
+      <button type="button" class="remove">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 25 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-minus preview-icon"
+          aria-hidden="true"
+        >
+          <path d="M5 12h14" />
+        </svg>
+        remove
+      </button>
     </nav>
 
-   <div class="conteudo">
-                <div class="entiquetas">
-                    <input type="text" id="tags" placeholder="Digite sua tag">
-                </div>
-                <div class="produtos">
-                    
+    <main class="conteudo">
+      <div class="entiquetas">
+        <input
+          type="text"
+          id="tags"
+          placeholder="Digite sua tag"
+          aria-label="Filtrar por tag"
+        />
+      </div>
+      <div class="produtos"></div>
+      <div class="info-add-item-oculto">
+        <h2>Adicionar Produto</h2>
+        <form id="form-adicionar-produto">
+          <div class="produto-campo">
+            <label for="nome-produto">Nome do Produto:</label>
+            <input type="text" id="nome-produto" name="nome-produto" required />
+          </div>
 
-                </div>
-        <div class="info-add-item-oculto">
-            
-                <h2>Adicionar Produto</h2>
-                <form action="">
-                    <div class="produto-campo">
-                        <label for="nome-produto">Nome do Produto:</label>
-                            <input type="text" id="nome-produto" name="nome-produto" required>
-                    </div>
-                    
-                    <div class="produto-campo">
-                        <label for="valor-produto">Valor do Produto:</label>
-                            <input type="number" id="valor-produto" name="valor-produto" required>
-                    </div>
+          <div class="produto-campo">
+            <label for="valor-produto">Valor do Produto:</label>
+            <input
+              type="number"
+              id="valor-produto"
+              name="valor-produto"
+              step="any"
+              required
+            />
+          </div>
 
-                    <div class="produto-campo-desc">        
-                        <label for="descricao-produto">Descrição do Produto:</label>
-                        <input  type="text" id="descricao-produto" name="descricao-produto" required>
-                    </div>
-                    </form>
-            
-            <div class="botoes-produto">       
-                <button type="submit" class="confirmar-produto" id="confirmar-produto">Adicionar</button>
-                <button type="button" class="cancelar-produto" id="cancelar-produto">Cancelar</button>
-            </div>
-        </div>
- 
-   </div>
+          <div class="produto-campo-desc">
+            <label for="descricao-produto">Descrição do Produto:</label>
+            <input
+              type="text"
+              id="descricao-produto"
+              name="descricao-produto"
+              required
+            />
+          </div>
 
-   <script src="../js/interactions/dashboard-handlers.js"></script>
-</body>
+          <div class="botoes-produto">
+            <button
+              type="submit"
+              class="confirmar-produto"
+              id="confirmar-produto"
+            >
+              Adicionar
+            </button>
+            <button
+              type="button"
+              class="cancelar-produto"
+              id="cancelar-produto"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="../../src/js/interactions/dashboard-handlers.js"></script>
+  </body>
 </html>
