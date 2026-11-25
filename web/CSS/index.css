@@ -10,7 +10,7 @@ html {
 
 @font-face {
   font-family: "Kolak";
-  src: url(../../assets/fonts/kolak.ttf) format("truetype"); /* Ajuste a extensão se for .otf ou .woff2 */
+  src: url(../../assets/fonts/kolak.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +21,7 @@ body {
   background-color: #f5f2ea;
 }
 
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   background: white;
 }
 
-.logo {
+header > a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -38,23 +38,37 @@ body {
   font-size: 23px;
   font-weight: bold;
 }
-.logo-img {
-  width: 40px; /* Ajuste o tamanho conforme necessário */
-  height: 40px; /* Ajuste o tamanho conforme necessário */
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+h1 {
+  font-family: "Kolak", sans-serif;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
 }
 
 nav {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
+
 nav a {
   color: #475569;
   text-decoration: none;
 }
-.btn-nav {
+
+nav a:hover {
+  color: #292c2f;
+}
+
+header div {
   gap: 20px;
   display: flex;
 }
+
 .btn-login {
   display: inline-block;
   padding: 12px 20px;
@@ -74,32 +88,26 @@ nav a {
   text-decoration: none;
 }
 
-.container-titulo {
+.texto-apoio {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 200px;
   margin-top: 0;
-  margin-left: 45px;
+  margin-left: 130px;
 }
+
 .subtitulo {
-  margin: 0 0 2px 24px;
+  margin-bottom: 24px;
   align-self: flex-start;
-  padding: 8px 16px;
+  padding: 8px 70px;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #0f172a;
   background-color: #b9e8f2;
   border: 1px solid #7bcbdc;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(58, 155, 176, 0.2);
-}
-h1 {
-  font-family: "Kolak", sans-serif;
-  margin: 0;
-  color: rgb(0, 0, 0);
-  font-size: 24px;
 }
 
 .tag {
