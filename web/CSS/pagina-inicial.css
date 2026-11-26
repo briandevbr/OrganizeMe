@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Kolak";
+  src: url(../../assets/fonts/kolak.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #182238;
+  background-color: #f5f2ea;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+}
+
+header > a {
+  font-family: "Kolak", sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+header a .perfil-user {
+  font-size: 36px;
+  color: #182238;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.painel-retratil {
+    margin-left: 0;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #182238;
+}
