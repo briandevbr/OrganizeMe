@@ -1,120 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/icon/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./web/CSS/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/icon/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./web/CSS/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>OrganizeMe</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="./index.html">
-             <img src="./assets/images/icon/favicon.ico" alt="Ícone 3D de um gaveteiro verde-água com a gaveta inferior aberta contendo pastas organizadas" class="logo-img">
-             <h1>OrganizeMe</h1>
-        </a>
-         <nav>
-            <a href="#area-planos" class="link-planos">Planos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="./web/pages/ajuda.html">Ajuda</a>
-        </nav>
-        <div>
-         <a href="./web/pages/login.html" class="btn-login">Entrar</a>
-         <a href="./web/pages/cadastro.html" class="btn-cadastro">Junte-se a nós</a>
-        </div>
-   </header>
+      <a href="./index.html">
+        <img
+          src="./assets/images/icon/favicon.ico"
+          alt="Ícone 3D de um gaveteiro verde-água com a gaveta inferior aberta contendo pastas organizadas"
+          class="logo-img"
+        />
+        <h1>OrganizeMe</h1>
+      </a>
+      <nav>
+        <a href="#area-planos" class="link-planos">Planos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="./web/pages/ajuda.html">Ajuda</a>
+      </nav>
+      <div>
+        <a href="./web/pages/login.html" class="btn-login">Entrar</a>
+        <a href="./web/pages/cadastro.html" class="btn-cadastro">Junte-se a nós</a>
+      </div>
+    </header>
 
     <main>
-     <section class="titulo" id="home">
-        <div class ="texto-apoio">
-            <p class="subtitulo">Um jeito simples de se organizar</p>
-            <h2 class="tag">Organize seus produtos automaticamente<br>de forma simples e fácil</h2>
-            <p class="descricao">Com a OrganizeMe você pode organizar seus produtos de forma rápida e eficiente.</p>
+      <section class="texto-apoio">
+        <div>
+          <p class="subtitulo">Um jeito simples de se organizar</p>
+          <h2>
+            Organize seus produtos automaticamente
+            <br />
+            de forma simples e fácil
+          </h2>
+          <p class="descricao">Com a OrganizeMe você pode organizar seus produtos de forma rápida e eficiente.</p>
         </div>
+      </section>
+
+      <article>
         <div class="stack">
-            <div class="card c1">Organização</div>
-            <div class="card c2">Produtos</div>
-            <div class="card c3">Fácil</div>
+          <div class="c1">Organização</div>
+          <div class="c2">Produtos</div>
+          <div class="c3">Fácil</div>
         </div>
-    </section>
+      </article>
 
-    <section class="planos" id="planos">
-        <div class="area-planos"id="area-planos"> <!--Área onde esta os planos-->
+      <section class="planos" id="area-planos">
+        <header class="planos-cabecalho">
+          <h2>Escolha o plano ideal para você</h2>
+          <p>Transforme seus resultados com a opção que melhor se adapta às suas necessidades.</p>
+        </header>
 
-                 <div class="container-titulo-planos">
-                        <h2>Escolha o plano ideal para você</h2>
-                        <p>Transforme seus resultados com a opção que melhor se adapta às suas  necessidades.</p>
-                    </div>
-
-
-            <div class = "container-planos"> <!--Caixa onde esta os planos-->
-                <div class = "plano01 plano-card">
-                    <div class="base-planos">
-                        <h3 class="titulo-plano">Inicial</h3>
-                        <p class="valores"> <span class="preco">Gratuito</span></p>
-                        <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
-                        <a href="./web/pages/cadastro.html"><button type="button" class="botaop">Começar grátis</button></a> <!--Botão para o plano free-->
-                    </div>
-                    <div class="linha-horizontal"></div>
-                    <ul class="card-lista">
-                        <li>Cadastro de até 25 produtos</li>
-                        <li>Apenas um usuario para adiministrar</li>
-                        <li>Suporte por e-mail</li>
-                        <li class="anuncio">Com Anuncios</li>
-                    </ul>
-                </div>
-                <div class="plano02 plano-card">
-                    <div class="base-planos">
-                        <div class="plano2Recomendado"><h3 class="titulo-plano"> Intermediário</h3><span class="recomendado">RECOMENDADO</span></div>
-                        <p class="valores"> <span class="preco">R$ 19,99</span class="mes-preco"><span>/mês</span></p>
-                        <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
-                        <a href="./web/pages/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para o plano Intermediário-->
-                    </div>
-                    <div class="linha-horizontal"></div>
-                    <ul class="card-lista">
-                        <li>Cadastro de até 150 produtos</li>
-                        <li>Até 4 usuarios para adiministrar</li>
-                        <li>Relatórios avançados de estoque</li>
-                        <li>Suporte por chat e e-mail</li>
-                        <li>Sem Anuncios</li>
-                    </ul>
-                </div>
-                <div class="plano03 plano-card">
-                    <div class="base-planos">
-                    <h3 class="titulo-plano"> Avançado</h3>
-                        <p class="valores"><span class="preco">R$ 29,99</span><span class="mes-preco">/mês</span></p>
-                        <p>Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.</p>
-                        <a href="./web/pages/cadastro.html"><button type="button" class="botaop">Assinar</button></a> <!--Botão para plano Avançado-->
-                    </div>
-                    <div class="linha-horizontal"></div>
-                    <ul class="card-lista">
-                        <li>Cadastro ilimitado de produtos</li>
-                        <li>Usuarios ilimitados para adiministrar</li>
-                        <li>Relatórios detalhados de estoque</li>
-                        <li>Suporte prioritário por chat e e-mail</li>
-                        <li>Sem Anuncios</li>
-                    </ul>
-                </div>
+        <div class="container-planos">
+          <article class="plano-card">
+            <div class="plano-info">
+              <h3 class="plano-titulo">Inicial</h3>
+              <p class="plano-valor"><strong class="preco">Gratuito</strong></p>
+              <p>Ideal para quem está começando e precisa de uma solução simples para organizar seus produtos.</p>
+              <a class="plano-botao" href="./web/pages/cadastro.html">Começar grátis</a>
             </div>
-        </div>
-    </section>
- </main>
- <footer class="rodape">
-  <div class="rodape-links">
-    <a href="#">Contato</a>
-  </div>
-  <img src="./assets/images/logo-organizeme-150X158.png" alt="Logo" class="logo-img-footer">
-  <p>&copy; 2026 OrganizeMe. Todos os direitos reservados.</p>
-</footer>
-    <!--Animação planos-->
-    <script src="./src/js/ui/animation-index.js"></script>
-    </body>
-</html><!-- Página principal do Sistema -->
+            <hr />
+            <ul class="plano-lista">
+              <li>Cadastro de até 25 produtos</li>
+              <li>Apenas um usuario para adiministrar</li>
+              <li>Suporte por e-mail</li>
+              <li class="anuncio">Com Anuncios</li>
+            </ul>
+          </article>
 
-<!--Eu vou adicionar uma animação para as cartas rotativas, para que elas girem automaticamente a cada 3 segundos. Além disso, vou fazer elas trocarem de lugar ao clicar. ASS: Kauã-->
+          <article class="plano-card destaque">
+            <div class="plano-info">
+              <div class="plano-topo">
+                <h3 class="plano-titulo">Intermediário</h3>
+                <span class="selo">RECOMENDADO</span>
+              </div>
+              <p class="plano-valor">
+                <strong class="preco">R$ 19,99</strong>
+                <span>/mês</span>
+              </p>
+              <p>Perfeito para quem precisa de mais recursos e deseja expandir seu inventário de produtos.</p>
+              <a class="plano-botao" href="./web/pages/cadastro.html">Assinar</a>
+            </div>
+            <hr />
+            <ul class="plano-lista">
+              <li>Cadastro de até 150 produtos</li>
+              <li>Até 4 usuarios para adiministrar</li>
+              <li>Relatórios avançados de estoque</li>
+              <li>Suporte por chat e e-mail</li>
+              <li>Sem Anuncios</li>
+            </ul>
+          </article>
+
+          <article class="plano-card">
+            <div class="plano-info">
+              <h3 class="plano-titulo">Avançado</h3>
+              <p class="plano-valor">
+                <strong class="preco">R$ 29,99</strong>
+                <span>/mês</span>
+              </p>
+              <p>
+                Para empresas que precisam de recursos avançados e desejam gerenciar um grande inventário de produtos.
+              </p>
+              <a class="plano-botao" href="./web/pages/cadastro.html">Assinar</a>
+            </div>
+            <hr />
+            <ul class="plano-lista">
+              <li>Cadastro ilimitado de produtos</li>
+              <li>Usuarios ilimitados para adiministrar</li>
+              <li>Relatórios detalhados de estoque</li>
+              <li>Suporte prioritário por chat e e-mail</li>
+              <li>Sem Anuncios</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape-links">
+        <a href="#">Contato</a>
+      </div>
+      <img src="./assets/images/logo-organizeme-150X158.png" alt="Logo" class="logo-img-footer" />
+      <p>&copy; 2026 OrganizeMe. Todos os direitos reservados.</p>
+    </footer>
+    <script src="./src/js/ui/animation-index.js"></script>
+  </body>
+</html>
