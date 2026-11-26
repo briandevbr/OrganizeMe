@@ -1,104 +1,174 @@
-body{
-    background-color: blueviolet;
-}
-.painel {
-    display: flex;
-    align-items: center;       
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding: 12px 25px;
-    box-sizing: border-box;
-    background: #c1f5de;
-    background: linear-gradient(270deg, rgb(161, 243, 206) 2%, rgba(240, 255, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
-    height: 50px;
-}   
-.profile-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
-.ferramentas{
-  background-color: bisque;
+@font-face {
+  font-family: "Kolak";
+  src: url(../../assets/fonts/kolak.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #182238;
+  background-color: #f5f2ea;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+}
+
+header > a {
+  font-family: "Kolak", sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+header a .perfil-user {
+  font-size: 36px;
+  color: #000000;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f2ea;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+nav > button {
+  background-color: #f5f2ea;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+aside input {
+  padding: 2px;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+  padding-left: 30px;
+}
+aside i {
+  position: absolute;
+  transform: translateY(5px) translateX(5px);
+}
+
+.ferramentas {
+  background-color: rgb(128, 219, 32);
   display: flex;
   flex-direction: row;
-  margin-top: 60px;
   padding: 10px;
-  
- 
-
-}
-.add{
-    background-color: #dedede;
 }
 
-.conteudo {
-    display: flex;
-    height:100%;
-    margin-top: 5px;
-    gap: 10px;
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-.entiquetas{
-    background-color: #dedede;
-    padding: 10px;
-    height: 970px;
-    width: 200px;
-}
-.produtos{
-    background-color: #7b3535;
-    height: 970px;
-    flex: 1;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
-    gap: 10px;
-}
-.produto-exemplo{
-    background-color: #0be400;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-.info-add-item-oculto{
-    display: none;
-}
-.info-add-item-ativo{
-    background-color: #868686;
-    height: 200px;
-    width: 400px;
-    padding: 10px;
-    position: fixed;
-    z-index: 10;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.produto-campo{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+aside {
+  display: flex;
+  background-color: blue;
+  min-height: 500px;
+  padding: 5px;
+  border-radius: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1px;
+  width: 250px;
+  flex-shrink: 0;
+  margin-left: 20px;
 }
 
-.botoes-produto{
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    margin-top: 10px;
+main {
+  background-color: red;
+  min-height: 568px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.produtos {
+  width: 100%;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); 
+  gap: 16px;
+  align-content: start;
+}
+
+.produtos > div {
+  width: 100%;
+  min-height: 200px;
+  background-color: #f5f2ea;
+}
+
+.info-add-item-oculto {
+  display: none;
+}
+
+.info-add-item-ativo {
+  background-color: #868686;
+  height: 200px;
+  width: 400px;
+  padding: 10px;
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.produto-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.botoes-produto {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 10px;
 }
