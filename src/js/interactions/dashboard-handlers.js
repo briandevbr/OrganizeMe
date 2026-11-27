@@ -26,17 +26,24 @@ confirmarProduto.addEventListener("click", function () {
         const botaoSelecionar = document.createElement("button");
         botaoSelecionar.textContent = "Selecionar";
         novoProduto.appendChild(botaoSelecionar);
-        botaoSelecionar.addEventListener("click", function () {
-            novoProduto.classList.replace("produtos-exemplos", "produtos-exemplos-selecionado");
-            botaoSelecionar.textContent = "Selecionado";
-        });
-
+botaoSelecionar.addEventListener("click", function () {
+    if (botaoSelecionar.textContent === "Selecionar") {
+        novoProduto.classList.replace("produtos-exemplos", "produtos-exemplos-selecionado");
+        botaoSelecionar.textContent = "Selecionado";
+    } else {
+        novoProduto.classList.replace("produtos-exemplos-selecionado", "produtos-exemplos");
+        botaoSelecionar.textContent = "Selecionar";
+    }
+});
     // Limpar os campos do formulário após adicionar o produto
     document.getElementById("nome-produto").value = "";
     document.getElementById("descricao-produto").value = "";
     document.getElementById("valor-produto").value = "";
  });
 
-
-
-
+removerProduto.addEventListener("click", function () {
+    const produtosSelecionados = document.querySelectorAll(".produtos-exemplos-selecionado");
+    produtosSelecionados.forEach(function (produto) {
+        produto.remove();
+    });
+});
