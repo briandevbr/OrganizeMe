@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Kolak";
+  src: url(../../assets/fonts/kolak.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #182238;
+  background-color: #f5f2ea;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+}
+
+header > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #5b5fef;
+  font-size: 23px;
+  font-weight: bold;
+}
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+h1 {
+  font-family: "Kolak", sans-serif;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #475569;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #292c2f;
+}
+
+header div {
+  gap: 20px;
+  display: flex;
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #0f172a;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid #0f172a;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.btn-cadastro {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #7bd1ca;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.sobre, .missao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: calc(100% - 80px);
+    max-width: 1300px;
+    margin: 60px auto;
+    font-size: 20px;
+}
+
+.container-sobre, .container-missao {
+    flex: 1;
+    min-width: 0;
+    max-width: 600px;
+}
+
+.imagem-sobre, .imagem-missao {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-sobre img, .imagem-missao img {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+}
+
+.sobre h2, .missao h2 {
+    font-family: "Kolak", sans-serif;
+    margin: 0 0 20px;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+
+    .sobre, .missao {
+        flex-direction: column;
+        width: calc(100% - 40px);
+        gap: 30px;
+    }
+
+    .container-sobre, .container-missao, .imagem-sobre, .imagem-missao {
+        width: 500%;
+        max-width: 500%;
+    }
+
+    .imagem-sobre img, .imagem-missao img {
+        max-width: 500px;
+    }
+
+}
+

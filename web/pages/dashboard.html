@@ -4,97 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/dashboard.css" />
-    <link
-      rel="shortcut icon"
-      href="../../assets/images/icon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <title>Home</title>
+    <link rel="shortcut icon" href="../../assets/images/icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Dashboard | OrganizeMe</title>
   </head>
   <body>
-    <header class="painel">
-      <h1>OrganizeMe</h1>
-      <button
-        type="button"
-        class="profile-btn"
-        id="profile-btn"
-        aria-label="Perfil"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-user preview-icon"
-          aria-hidden="true"
-        >
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-          <circle cx="12" cy="7" r="4" />
-        </svg>
-      </button>
-    </header>
+    
+ <header>
+     <a href="#" arial-label="Painel Retráil" class="painel-retratil"><i class="fa-solid fa-bars"></i></a>
+        <a href="../../index.html" class="logo">
+             <img src="../../assets/images/icon/favicon.ico" alt="Ícone 3D de um gaveteiro verde-água com a gaveta inferior aberta contendo pastas organizadas" class="logo-img">
+             <h1>OrganizeMe</h1>
+        </a>
+        <a href="#" aria-label="Perfil do usuário" >
+           <i class="fa-regular fa-circle-user perfil-user"></i>
+        </a>
+   </header>
 
-    <nav class="ferramentas" aria-label="Ferramentas do inventário">
-      <button type="button" class="add" id="add-product">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-plus preview-icon"
-          aria-hidden="true"
-        >
-          <path d="M5 12h14" />
-          <path d="M12 5v14" />
-        </svg>
-        add
-      </button>
-      <button type="button" class="remove">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 25 20"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-minus preview-icon"
-          aria-hidden="true"
-        >
-          <path d="M5 12h14" />
-        </svg>
-        remove
-      </button>
-    </nav>
-
-    <main class="conteudo">
-      <div class="entiquetas">
-        <input
-          type="text"
-          id="tags"
-          placeholder="Digite sua tag"
-          aria-label="Filtrar por tag"
-        />
-      </div>
-      <div class="produtos"></div>
-      <div class="info-add-item-oculto">
-        <h2>Adicionar Produto</h2>
+<div class="dashboard-container">
+  <div class="sidebar">
+      <nav class="ferramentas" aria-label="Ferramentas do inventário">
+        <button type="button" id="add-product">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <button type="button" id="remove-product">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+      </nav>  
+    <aside class="entiquetas">
+      <i class="fa-brands fa-sistrix"></i> 
+      <input type="text" placeholder="Filtrar por etiqueta..." /> 
+    </aside>
+  </div>
+  <main>
+    <section class="produtos">
+      <!-- As divs de produto nascem aqui dentro -->
+    </section>
+  
+  <section class="info-add-item-oculto">
+      <h2>Adicionar Produto</h2>
         <form id="form-adicionar-produto">
           <div class="produto-campo">
             <label for="nome-produto">Nome do Produto:</label>
@@ -103,45 +51,27 @@
 
           <div class="produto-campo">
             <label for="valor-produto">Valor do Produto:</label>
-            <input
-              type="number"
-              id="valor-produto"
-              name="valor-produto"
-              step="any"
-              required
-            />
+            <input type="number" id="valor-produto" name="valor-produto" step="any" required/>
           </div>
 
           <div class="produto-campo-desc">
             <label for="descricao-produto">Descrição do Produto:</label>
-            <input
-              type="text"
-              id="descricao-produto"
-              name="descricao-produto"
-              required
-            />
+            <input type="text" id="descricao-produto"  name="descricao-produto" required/>
           </div>
 
-          <div class="botoes-produto">
-            <button
-              type="submit"
-              class="confirmar-produto"
-              id="confirmar-produto"
-            >
+          <div  class="botoes-produto">
+            <button type="submit" class="confirmar-produto"id="confirmar-produto">
               Adicionar
             </button>
-            <button
-              type="button"
-              class="cancelar-produto"
-              id="cancelar-produto"
-            >
+            <button type="button" class="cancelar-produto" id="cancelar-produto">
               Cancelar
             </button>
           </div>
         </form>
-      </div>
-    </main>
+    </section>    
+  </main>
 
+</div>   
     <script src="../../src/js/interactions/dashboard-handlers.js"></script>
   </body>
 </html>
