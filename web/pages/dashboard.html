@@ -9,21 +9,26 @@
     <title>Dashboard | OrganizeMe</title>
   </head>
   <body>
-    
- <header>
-     <a href="#" arial-label="Painel Retráil" class="painel-retratil"><i class="fa-solid fa-bars"></i></a>
-        <a href="../../index.html" class="logo">
-             <img src="../../assets/images/icon/favicon.ico" alt="Ícone 3D de um gaveteiro verde-água com a gaveta inferior aberta contendo pastas organizadas" class="logo-img">
-             <h1>OrganizeMe</h1>
-        </a>
-        <a href="#" aria-label="Perfil do usuário" >
-           <i class="fa-regular fa-circle-user perfil-user"></i>
-        </a>
-   </header>
+
+<header>
+  <div class="header-esquerda">
+    <a href="#" aria-label="Painel Retrátil" class="painel-retratil">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <a href="../../index.html" class="logo">
+      <img src="../../assets/images/icon/favicon.ico" alt="Ícone 3D de um gaveteiro verde-água com a gaveta inferior aberta contendo pastas organizadas" class="logo-img" />
+      <h1>OrganizeMe</h1>
+    </a>
+  </div>
+
+  <a href="#" aria-label="Perfil do usuário" class="perfil-link">
+    <i class="fa-regular fa-circle-user perfil-user"></i>
+  </a>
+</header>
 
 <div class="dashboard-container">
   <div class="sidebar">
-      <nav class="ferramentas" aria-label="Ferramentas do inventário">
+      <nav  aria-label="Ferramentas do inventário">
         <button type="button" id="add-product">
           <i class="fa-solid fa-plus"></i>
         </button>
@@ -51,20 +56,26 @@
 
           <div class="produto-campo">
             <label for="valor-produto">Valor do Produto:</label>
-            <input type="number" id="valor-produto" name="valor-produto" step="any" required/>
+            <input type="number" id="valor-produto" name="valor-produto" step="any" required placeholder="R$0"/>
           </div>
 
           <div class="produto-campo-desc">
             <label for="descricao-produto">Descrição do Produto:</label>
-            <input type="text" id="descricao-produto"  name="descricao-produto" required/>
+            <textarea id="descricao-produto" name="descricao-produto" rows="4" cols="68" placeholder="Digite sua mensagem..."></textarea>
           </div>
-
+          <div class="colocar-imagen">
+            <label for="importar-img" class="text-imp-img">
+              <i class="fa-solid fa-upload" aria-hidden="true"></i>
+              <span>Coloque uma imagem</span>
+            </label>
+            <input type="file" id="importar-img" name="importar-img" accept="image/*" required />
+          </div>
           <div  class="botoes-produto">
-            <button type="submit" class="confirmar-produto"id="confirmar-produto">
-              Adicionar
-            </button>
             <button type="button" class="cancelar-produto" id="cancelar-produto">
               Cancelar
+            </button>
+            <button type="submit" class="confirmar-produto"id="confirmar-produto">
+              Adicionar
             </button>
           </div>
         </form>
