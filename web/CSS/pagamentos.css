@@ -1,59 +1,429 @@
-:root {
-  --bg: #f4f5f7; --surface: #fff; --ink: #1b2430; --muted: #667085; --line: #e3e6eb;
-  --accent: #0f766e; --pago: #0f766e; --pendente: #b45309; --falho: #b91c1c;
+/* Página Pagamentos – mesmo estilo do index.css do OrganizeMe */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #11151b; --surface: #1a2029; --ink: #eef1f5; --muted: #98a2b3; --line: #2a323e;
-          --accent: #2dd4bf; --pago: #2dd4bf; --pendente: #fbbf24; --falho: #f87171; }
+
+html {
+  scroll-behavior: smooth;
 }
 
-* { box-sizing: border-box; margin: 0; }
-body { font-family: "IBM Plex Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); }
-button { font: inherit; color: inherit; text-align: left; cursor: default; }
-ul { list-style: none; padding: 0; }
-
-/* As duas telas lado a lado, como no wireframe */
-.layout { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; padding: 24px 16px; }
-.screen { width: 100%; max-width: 380px; padding: 20px 18px 28px; background: var(--bg); border: 1px solid var(--line); border-radius: 20px; }
-
-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-h1 { font-size: 1.25rem; font-weight: 600; }
-h2 { font-size: .95rem; font-weight: 600; margin-bottom: 12px; }
-
-/* Superfícies em comum */
-.tile, .method, .item, .search, .back, .chip {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+@font-face {
+  font-family: "Kolak";
+  src: url(../../assets/fonts/kolak.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-.ico { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
-/* Resumo financeiro */
-.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.tile { display: grid; gap: 10px; padding: 14px; border-radius: 12px; }
-.tile span { font-size: .8rem; color: var(--muted); }
-.tile strong { font-size: 1.15rem; }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #182238;
+  background-color: #f5f2ea;
+}
 
-.full { width: 100%; margin: 12px 0 28px; padding: 12px; text-align: center; font-weight: 500;
-        color: var(--accent); background: none; border: 1px solid var(--accent); border-radius: 10px; }
+/* Foco visível para quem navega com o teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #0e4f43;
+  outline-offset: 3px;
+}
 
-/* Métodos de pagamento */
-.methods { display: grid; gap: 8px; }
-.method { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; font-weight: 500; }
-.method::after { content: ""; margin-left: auto; width: 8px; height: 8px;
-                 border: solid var(--muted); border-width: 2px 2px 0 0; transform: rotate(45deg); }
+/* ---------- Cabeçalho (igual ao da página inicial) ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 8%;
+  background: white;
+}
 
-/* Histórico */
-.back { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; }
-.search { width: 100%; padding: 12px 14px; font: inherit; color: inherit; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: "Kolak", sans-serif;
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+}
 
-.chips { display: flex; gap: 8px; margin: 12px 0 16px; overflow-x: auto; }
-.chip { padding: 6px 14px; font-size: .85rem; white-space: nowrap; border-radius: 999px; }
-.chip.ativo { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.logo img {
+  width: 52px;
+  height: 52px;
+}
 
-.list { display: grid; gap: 8px; }
-.item { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px; }
-.item small { color: var(--muted); font-size: .78rem; }
-.item b { text-align: right; }
-.item i { display: flex; align-items: center; justify-content: flex-end; gap: 6px;
-          font-size: .78rem; font-style: normal; }
-.item i::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-.pago i { color: var(--pago); } .pendente i { color: var(--pendente); } .falho i { color: var(--falho); }
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+header nav a {
+  padding: 10px 4px;
+  font-family: "Inter", sans-serif;
+  color: #475569;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+/* Botões opcionais do cabeçalho (iguais aos da página inicial) */
+.btn-login {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #0f172a;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid #0f172a;
+}
+
+.btn-cadastro {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #7bd1ca;
+  color: #0f172a;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* ---------- A interface (celular: ocupa a largura toda) ---------- */
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+/* Topo: seta redonda + título */
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topo button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.topo button:hover {
+  background: #7bd1ca;
+  transform: translateY(-2px);
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Resumo Financeiro: 4 quadrados em 2 colunas */
+#resumo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+#resumo h2,
+#resumo > button {
+  grid-column: 1 / -1;
+}
+
+.pagamento {
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  border: 1px solid #7bcbdc;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s ease;
+}
+
+.pagamento:nth-of-type(1) {
+  background: linear-gradient(135deg, #a5e2db, #e1eeee);
+}
+.pagamento:nth-of-type(2) {
+  background: linear-gradient(135deg, #e1eeee, #feffff);
+}
+.pagamento:nth-of-type(3) {
+  background: linear-gradient(135deg, #feffff, #a5e2db);
+}
+.pagamento:nth-of-type(4) {
+  background: linear-gradient(135deg, #a5e2db, #feffff);
+}
+
+.pagamento:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 26px rgba(15, 23, 42, 0.18);
+}
+
+/* Ícones feitos com Font Awesome (o mesmo do index.html) */
+.pagamento::before,
+#metodos button::before,
+#metodos button::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.pagamento::before {
+  font-size: 28px;
+  color: #0e4f43;
+}
+
+.pagamento:nth-of-type(1)::before {
+  content: "\f058";
+  font-weight: 400;
+}
+
+.pagamento:nth-of-type(2)::before {
+  content: "\f017";
+  font-weight: 400;
+}
+
+.pagamento:nth-of-type(3)::before {
+  content: "\f155";
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  border: 2px solid #0e4f43;
+  border-radius: 50%;
+}
+
+.pagamento:nth-of-type(4)::before {
+  content: "\f543";
+}
+
+/* Botão Histórico Completo (mesmo estilo do botão "Entrar") */
+#resumo > button {
+  justify-self: center;
+  min-height: 48px;
+  padding: 12px 28px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#resumo > button:hover {
+  background: #7bd1ca;
+  transform: translateY(-2px);
+}
+
+/* Métodos de Pagamento */
+#metodos {
+  margin-top: 30px;
+}
+
+#metodos ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+#metodos button {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#metodos button:hover {
+  background: #b9e8f2;
+  transform: translateY(-2px);
+}
+
+#metodos button::before {
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  color: #0e4f43;
+}
+
+/* Seta > colada na ponta direita */
+#metodos button::after {
+  content: "\f054";
+  margin-left: auto;
+  font-size: 14px;
+}
+
+#metodos li:nth-child(1) button::before {
+  content: "\f219";
+}
+
+#metodos li:nth-child(2) button::before {
+  content: "\f09d";
+  font-weight: 400;
+}
+
+#metodos li:nth-child(3) button::before {
+  content: "\f02a";
+}
+
+#metodos li:nth-child(4) button::before {
+  content: "\f0c8";
+  font-weight: 400;
+}
+
+/* ---------- Computador: a interface ocupa a tela, em blocos ---------- */
+@media (min-width: 700px) {
+  main {
+    max-width: 1040px;
+    margin: 40px auto 60px;
+    padding: 0 24px;
+    background: transparent;
+  }
+
+  .topo {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .topo button {
+    width: 48px;
+    height: 48px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Cada bloco vira um cartão branco, como os planos da página inicial */
+  #resumo,
+  #metodos {
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+  }
+
+  #resumo {
+    gap: 20px;
+    margin-top: 0;
+  }
+
+  #metodos {
+    margin-top: 24px;
+  }
+
+  .pagamento {
+    min-height: 150px;
+    font-size: 17px;
+  }
+
+  .pagamento::before {
+    font-size: 36px;
+  }
+
+  .pagamento:nth-of-type(3)::before {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  #resumo > button {
+    justify-self: start;
+  }
+
+  #metodos ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  #metodos button {
+    min-height: 60px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 960px) {
+  #resumo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pagamento,
+  .topo button,
+  #resumo > button,
+  #metodos button {
+    transition: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+}
