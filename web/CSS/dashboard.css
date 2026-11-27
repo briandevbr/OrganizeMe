@@ -139,6 +139,10 @@ main {
   background-color: #f5f2ea;
 }
 
+.produtos-exemplos-selecionado{
+  background-color: #d1e7dd;
+  border: 10px solid #0f5132;
+}
 .info-add-item-oculto {
   display: none;
 }
