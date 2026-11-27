@@ -1,6 +1,7 @@
  const adicionarProduto = document.getElementById("add-product");
  const confirmarProduto = document.getElementById("confirmar-produto");
  const cancelarProduto = document.getElementById("cancelar-produto");
+ const removerProduto = document.getElementById("remove-product");
 
  // Quando o botão "add" é clicado, exibe o formulário de adição de produto
  adicionarProduto.addEventListener("click", function () { 
@@ -18,13 +19,24 @@ confirmarProduto.addEventListener("click", function () {
      const nomeProduto = document.getElementById("nome-produto").value;
      const descricaoProduto = document.getElementById("descricao-produto").value;
      const valorProduto = document.getElementById("valor-produto").value;
-        novoProduto.classList.add("produto-exemplo");
+        novoProduto.classList.add("produtos-exemplos");
         novoProduto.innerHTML = `<p>${nomeProduto}</p><p>${descricaoProduto}</p><p>R$ ${valorProduto}</p>`;//
         produtosContainer.appendChild(novoProduto);
+
+        const botaoSelecionar = document.createElement("button");
+        botaoSelecionar.textContent = "Selecionar";
+        novoProduto.appendChild(botaoSelecionar);
+        botaoSelecionar.addEventListener("click", function () {
+            novoProduto.classList.replace("produtos-exemplos", "produtos-exemplos-selecionado");
+            botaoSelecionar.textContent = "Selecionado";
+        });
 
     // Limpar os campos do formulário após adicionar o produto
     document.getElementById("nome-produto").value = "";
     document.getElementById("descricao-produto").value = "";
     document.getElementById("valor-produto").value = "";
  });
- 
+
+
+
+
